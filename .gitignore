@@ -1,0 +1,12 @@
+# Ignore build artifacts
+[Bb]in/
+[Oo]bj/
+.vs/
+
+# Ignore MATLAB temporary files
+*.asv
+*.log
+
+# Ignore OS files
+Thumbs.db
+Desktop.ini

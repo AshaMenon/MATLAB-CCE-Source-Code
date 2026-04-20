@@ -1,0 +1,25 @@
+# Read and format data properties
+
+preprocessingAndFeatureEngineering :
+  # Preprocessing data properties
+
+  removeTransientData : False
+
+  smoothBasicityResponse : False
+
+  resampleTime : '1min'
+
+  resampleMethod : 'zero'
+
+subModel : 'Chemistry'
+  
+Logging:
+  LogName : 'FeAlignment.log'
+
+  CalculationID : 'TLB'
+
+  LogLevel : 255
+
+  CalculationName : 'TestFeAlignment'
+  
+  Path : '../data/BasicityModel/'

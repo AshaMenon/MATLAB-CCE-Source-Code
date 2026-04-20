@@ -1,0 +1,61 @@
+[
+	{"Name": "PV_Out#Value",
+	"Path": "POLS >> DataSources >> PCS7 >> aispolsos11 >> Tags >> FCE_PWR >> FurnacePower >> 410PF/PV",
+	"Label": "Total Electrode Power",
+	"Aggregation": "mean",
+	"Decimals":3},
+
+	{"Name": "PV_Out#Value",
+	"Path": "POLS >> DataSources >> PCS7 >> aispolsos11 >> Tags >> FCE_PWR >> FurnacePower >> 410RFT1/PV",
+	"Label": "Electrode 1-2 Resistance",
+	"Aggregation": "mean",
+	"Decimals":3},
+
+	{"Name": "PV_Out#Value",
+	"Path": "POLS >> DataSources >> PCS7 >> aispolsos11 >> Tags >> FCE_PWR >> FurnacePower >> 410RFT2/PV",
+	"Label": "Electrode 3-4 Resistance",
+	"Aggregation": "mean",
+	"Decimals":3},
+
+	{"Name": "PV_Out#Value",
+	"Path": "POLS >> DataSources >> PCS7 >> aispolsos11 >> Tags >> FCE_PWR >> FurnacePower >> 410RFT3/PV",
+	"Label": "Electrode 5-6 Resistance",
+	"Aggregation": "mean",
+	"Decimals":3},
+
+	{"Data ID": "DDF9AB11-4A9F-45C8-B797-7674B52A5B7C",
+    "Name" : "b497_TT_770.PV",
+	"Label": "Offgas Temperature",
+	"Aggregation": "mean",
+	"Decimals":3},
+
+	{"Data ID": "79CB05EC-520C-4917-AF6D-652E0BB1E7D0",
+    "Name" : "542AT035A/PV.SimPV",
+	"Label": "SO2 Concentration",
+	"Aggregation": "mean",
+	"Decimals":3},
+
+	{"Data ID": "5412797D-42F3-4A18-B95A-AB8CF728EB3E",
+    "Name" : "b410_FurnaceFeedPV",
+	"Label": "Furnace Feed",
+	"Aggregation": "mean",
+	"Decimals":3},
+
+	{"Data ID": "87103782-8A85-4EC2-9761-4AA1FF5A0EEF",
+    "Name" : "M:SE.MaxTemperature",
+	"Label": "East Slag Temp",
+	"Aggregation": "mean",
+	"Decimals":3},
+
+	{"Data ID": "75883BF3-FA6A-40F8-B4BE-44002686CFD1",
+    "Name" : "M:SW.MaxTemperature",
+	"Label": "West Slag Temp",
+	"Aggregation": "mean",
+	"Decimals":3},
+
+	{"Data ID": "A7CDCF71-2201-41A5-9292-B420C049DD2A",
+    "Name" : "M:SC.MaxTemperature",
+	"Label": "Center Slag Temp",
+	"Aggregation": "mean",
+	"Decimals":3}
+]

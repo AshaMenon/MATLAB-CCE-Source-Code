@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.7.5.7166" ExportMode="NoUniqueID" PISystem="cenmes" Database="Training01" Description="AAP Central OPM AF" Created="2016-03-22T11:28:08.3605116Z" id="79bb9bad-9499-416e-9d2d-7421f505636a" ParentKey="b51612d4-96ac-40af-a692-36aa0a84b45e" ExportedObject="APLetheCalculations" ExportedType="AFElementTemplate" Identity="ElementTemplate" PIPersist="196 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{3e99b57b-cbf9-41fd-a939-95e74e8f624e}\ElementTemplates[{79bb9bad-9499-416e-9d2d-7421f505636a}]*cenmes\Training01\ElementTemplates[APLetheCalculations]">
+  <AFElementTemplate>
+    <Name>APLetheCalculations</Name>
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <AFAttributeTemplate>
+      <Name>CalculationFrequency</Name>
+      <Description>The time (in seconds) period between calculation execution</Description>
+      <IsHidden>true</IsHidden>
+      <IsConfigurationItem>true</IsConfigurationItem>
+      <Type>Int32</Type>
+      <Value type="Int32">1800</Value>
+      <AFAttributeCategoryRef>Configuration</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>CalculationTest</Name>
+      <Description>Puts the calculation into test mode - no data is written out</Description>
+      <IsHidden>true</IsHidden>
+      <IsConfigurationItem>true</IsConfigurationItem>
+      <Type>Boolean</Type>
+      <Value type="Boolean">False</Value>
+      <AFAttributeCategoryRef>Configuration</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Enabled</Name>
+      <Description>Enable/disable the calculation</Description>
+      <IsHidden>true</IsHidden>
+      <IsConfigurationItem>true</IsConfigurationItem>
+      <Type>Boolean</Type>
+      <Value type="Boolean">False</Value>
+      <AFAttributeCategoryRef>Configuration</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>LogLevel</Name>
+      <Description>Calculation log level</Description>
+      <IsHidden>true</IsHidden>
+      <Type>Double</Type>
+      <Value type="Double">1</Value>
+      <AFAttributeCategoryRef>Configuration</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>WriteOutBadValues</Name>
+      <Description>The calculation suppreses writing out bad values</Description>
+      <IsHidden>true</IsHidden>
+      <IsConfigurationItem>true</IsConfigurationItem>
+      <Type>Boolean</Type>
+      <Value type="Boolean">True</Value>
+      <AFAttributeCategoryRef>Configuration</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+  </AFElementTemplate>
+</AF>

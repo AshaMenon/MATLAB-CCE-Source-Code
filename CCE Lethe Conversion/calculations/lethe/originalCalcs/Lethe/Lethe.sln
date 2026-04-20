@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lethe", "Lethe.csproj", "{ECB1E03F-5B06-43BA-BDB0-72F9A32962FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amplats.AF.Lethe.Calculation", "..\Amplats.AF.Lethe.Calculation\Amplats.AF.Lethe.Calculation.csproj", "{A26B1871-EA62-4754-9979-C7CA7374087C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetheTest", "..\LetheTest\LetheTest.csproj", "{7A4E4529-97EB-4D72-A111-D271FECEE2CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECB1E03F-5B06-43BA-BDB0-72F9A32962FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB1E03F-5B06-43BA-BDB0-72F9A32962FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB1E03F-5B06-43BA-BDB0-72F9A32962FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB1E03F-5B06-43BA-BDB0-72F9A32962FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A26B1871-EA62-4754-9979-C7CA7374087C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A26B1871-EA62-4754-9979-C7CA7374087C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A26B1871-EA62-4754-9979-C7CA7374087C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A26B1871-EA62-4754-9979-C7CA7374087C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A4E4529-97EB-4D72-A111-D271FECEE2CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A4E4529-97EB-4D72-A111-D271FECEE2CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A4E4529-97EB-4D72-A111-D271FECEE2CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A4E4529-97EB-4D72-A111-D271FECEE2CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

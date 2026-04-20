@@ -1,0 +1,3 @@
+For investigations necessary for development, anything that isn't part of a class or the final deployment goes here. 
+
+Create a subfolder for your own investigations, you do not need to commit what is in this folder.

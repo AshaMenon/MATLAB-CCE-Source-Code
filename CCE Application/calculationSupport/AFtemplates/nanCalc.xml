@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.10.9.593" ExportMode="NoUniqueID, DefaultValues" PISystem="ons-opcdev" Database="WACP" Description="" Created="2023-11-20T08:25:17.6894738Z" id="734976ac-fb7e-495c-be36-95f15391ad89" ParentKey="5c239f8e-8f19-4b2a-b903-f08254919f62" ExportedObject="nanCalc" ExportedType="AFElementTemplate" Identity="ElementTemplate" PIPersist="182 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{979c1ef3-25dd-4b05-a0c9-b0461d3fb5ab}\ElementTemplates[{734976ac-fb7e-495c-be36-95f15391ad89}]*ons-opcdev\WACP\ElementTemplates[nanCalc]">
+  <AFElementTemplate>
+    <Name>nanCalc</Name>
+    <Description />
+    <BaseTemplateOnly>false</BaseTemplateOnly>
+    <BaseTemplate>CCECalculation</BaseTemplate>
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>true</AllowElementToExtend>
+    <DefaultAttribute />
+    <NamingPattern />
+    <DefaultInputPort />
+    <DefaultOutputPort />
+    <DefaultUndirectedPort />
+    <AFElementCategoryRef>CCE</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <Name>ComponentName</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>String</Type>
+      <TypeQualifier />
+      <Value type="String">dependentCalcs</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Constant</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEParameter</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>OutputSensorGood1</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\ONS-OPCDEV?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%Attribute%;ReadOnly=False;pointtype=Float64</ConfigString>
+      <AFAttributeCategoryRef>CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>OutputSensorGood2</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\ONS-OPCDEV?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%Attribute%;ReadOnly=False;pointtype=Float64</ConfigString>
+      <AFAttributeCategoryRef>CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>OutputSensorNaN1</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\ONS-OPCDEV?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%Attribute%;ReadOnly=False;pointtype=Float64</ConfigString>
+      <AFAttributeCategoryRef>CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>OutputSensorNaN2</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\ONS-OPCDEV?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%Attribute%;ReadOnly=False;pointtype=Float64</ConfigString>
+      <AFAttributeCategoryRef>CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>OutputTime</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>DateTime</Type>
+      <TypeQualifier />
+      <Value type="DateTime">2021-10-24T22:00:00Z</Value>
+      <DataReference>Formula</DataReference>
+      <ConfigString>A=LastCalculationTime;B=ExecutionParameters|ExecutionFrequency;UOM=s;[A+B]</ConfigString>
+      <AFAttributeCategoryRef>CCEParameter</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>SensorReference</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\ONS-OPCDEV?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%Attribute%;ReadOnly=False;pointtype=Float64</ConfigString>
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description>"End Offset(AFTimeRange)". </Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description>true</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+  </AFElementTemplate>
+</AF>

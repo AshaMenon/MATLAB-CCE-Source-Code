@@ -1,0 +1,54 @@
+// Function Signatures
+// To optionally specify argument types and/or sizes, search for "type"
+// and insert the appropriate specifiers inside the brackets. For example:
+//
+//    "type": ["double", "size=1,1"]
+//
+// To modify function or parameter help text, search for "purpose" and edit
+// the values.
+//
+// JSON-formatted text below this line.
+{
+    "_schemaVersion": "1.1.0",
+    "oscillationDetection": {
+        "inputs": [
+            {   "name": "parameters",
+                "type": ["struct", "size=N,1"],
+                "purpose":""
+            },
+            {
+                "name": "pv",
+                "type": ["double", "size=N,1"],
+                "purpose": ""
+            },
+            {
+                "name": "pvTimeStamp",
+                "type": ["double", "size=1,N"],
+                "purpose": ""
+            },
+            {
+                "name": "rrCountRef",
+                "type": ["double", "size=1,1"],
+                "purpose": ""
+            },
+            {
+                "name": "oscCountRef",
+                "type": ["double", "size=1,1"],
+                "purpose": ""
+            }
+        ],
+        "outputs": [
+            {
+                "name": "rrCount",
+                "type": ["double", "size=1,1"],
+                "purpose": ""
+            },
+            {
+                "name": "oscCount",
+                "type": ["double", "size=1,1"],
+                "purpose": ""
+            }
+        ],
+        "purpose": "  reversalWrapperIndex: detect PV reversal oscillations\n  [rrInd,oscillation] = reversalWrapperIndex(raw,tSample,fs,rrWsize,unsteadyInd,pvThreshold,tIntegral,Rmax,application)\n  Input:\n        raw = n x 1 double array containing PV data matrix\n        tSample = data sampling interval [seconds] (normally 10)\n        fs = filter size [ seconds] (normally 60)\n        rrWsize = reversal index windows size [seconds] (normally 150)\n        unsteadyInd = n x 1 index indicating 1's where process unsteady\n        pvThreshold = threshold of PV variance\n        tIntegral = controller integral time [seconds]\n        Rmax = threshold for reversals detected (normally 10)\n        varargin\n            'executionRate' = 'offline'/'online'\n            'rrCount' = current rrCount\n            'oscCount' = current oscCount\n  Return:\n        rrCount = number of reversals detected\n        rrInd = reversal index\n        oscCount = number of reversal oscillations detected\n        oscInd = indices of detected oscillations\n        pvFilt = filtered value of raw data\n \n    Modified and updated by D. Groenewald March 2004\n"
+    }
+}

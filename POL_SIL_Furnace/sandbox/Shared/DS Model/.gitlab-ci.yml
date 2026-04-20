@@ -1,0 +1,25 @@
+default:
+  image: python:latest
+   
+variables:
+    # GIT_SUBMODULE_STRATEGY: recursive 
+    GIT_STRATEGY: clone
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+before_script:
+  - python --version 
+  - pip install virtualenv
+  - virtualenv venv
+  - source venv/bin/activate
+  - pip install -r requirements.txt
+  
+
+
+run:
+  script:
+    - pytest --cov
+    - coverage xml

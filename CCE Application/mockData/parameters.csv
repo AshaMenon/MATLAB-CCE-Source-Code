@@ -1,0 +1,2 @@
+TSample,Fs,RRWsize,PVThreshold,TIntegral,Rmax,LogName,CalculationID,LogLevel
+10,900,100,10000,500,10,cce_calc_event_logs\logFileTest.log,oscDet_001,All

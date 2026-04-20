@@ -1,0 +1,2069 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.10.9.593" ExportMode="NoUniqueID, DefaultValues" PISystem="ons-opcdev" Database="CCE" Description="Local Production database for Continuous Calculation Engine" Created="2024-12-04T12:42:05.775286Z" id="84469b5d-e131-4aab-bb8c-2e1f89f37a04" ParentKey="769419c0-2380-493e-904e-64f17c927fe8" ExportedObject="cceSoundingCalculation" ExportedType="AFElementTemplate" Identity="ElementTemplate" PIPersist="196 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{979c1ef3-25dd-4b05-a0c9-b0461d3fb5ab}\ElementTemplates[{84469b5d-e131-4aab-bb8c-2e1f89f37a04}]*ons-opcdev\CCE\ElementTemplates[cceSoundingCalculation]">
+  <AFElementTemplate>
+    <Name>cceSoundingCalculation</Name>
+    <Description />
+    <BaseTemplateOnly>false</BaseTemplateOnly>
+    <BaseTemplate>CCECalculation</BaseTemplate>
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <DefaultAttribute />
+    <NamingPattern />
+    <DefaultInputPort />
+    <DefaultOutputPort />
+    <DefaultUndirectedPort />
+    <AFElementCategoryRef>CCE</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <Name>BuildUpSoundingPort1</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>BuildUpSoundingPort10</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>BuildUpSoundingPort2</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>BuildUpSoundingPort3</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>BuildUpSoundingPort4</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>BuildUpSoundingPort5</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>BuildUpSoundingPort6</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>BuildUpSoundingPort7</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>BuildUpSoundingPort8</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>CalculationName</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>String</Type>
+      <TypeQualifier />
+      <Value type="String">cceCalcSoundingValuesWrapper</Value>
+      <DataReference />
+      <ConfigString />
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>CombinedValidDeltaSounding</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ConcentrateSoundingPort1</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ConcentrateSoundingPort10</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ConcentrateSoundingPort2</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ConcentrateSoundingPort3</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ConcentrateSoundingPort4</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ConcentrateSoundingPort5</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ConcentrateSoundingPort6</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ConcentrateSoundingPort7</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ConcentrateSoundingPort8</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ExecutionFrequencyParam</Name>
+      <Description>Execution frequency in minutes</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>Formula</DataReference>
+      <ConfigString>A=|ExecutionParameters|ExecutionFrequency;[A/60]</ConfigString>
+      <AFAttributeCategoryRef>CCEParameter</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>IsValidDeltaConc</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>IsValidDeltaMatte</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>IsValidDeltaSlag</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>MatteSoundingPort1</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>MatteSoundingPort10</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>MatteSoundingPort2</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>MatteSoundingPort3</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>MatteSoundingPort4</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>MatteSoundingPort5</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>MatteSoundingPort6</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>MatteSoundingPort7</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>MatteSoundingPort8</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>NewMeanConcThickness</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>NewMeanMattePlusBuildupThickness</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>NewMeanSlagThickness</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>NewMeanTotalLiquidThickness</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>SlagSoundingPort1</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>SlagSoundingPort10</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>SlagSoundingPort2</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>SlagSoundingPort3</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>SlagSoundingPort4</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>SlagSoundingPort5</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>SlagSoundingPort6</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>SlagSoundingPort7</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>SlagSoundingPort8</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-5h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+  </AFElementTemplate>
+</AF>

@@ -1,0 +1,203 @@
+# ------------------------------------------------------------------------------
+#
+# main_config -- Settings for MATLAB Production Server
+#
+#  Copyright (C) 2011-2021 The MathWorks, Inc.
+#
+#  Modified by Opti-Num Solutions for CCE Performance settings.
+#
+# ------------------------------------------------------------------------------
+
+# Restrict access to the HTTP interface to local clients only, port 9910
+# --http localhost:9910
+# (Default) Bind to all interfaces using port 9910
+#
+--http aisrtbccce01.angloiit.net:9910
+
+################################################################################
+#
+# HTTPS Settings
+# https disabled on the assumption that this is a trusted environment.
+#
+# Access Control Settings
+# Not managed on the assumption that this is a trusted environment.
+#
+################################################################################
+
+################################################################################
+#
+# MATLAB Runtime Settings
+#
+################################################################################
+
+# mcr-root
+# Syntax: --mcr-root PATH
+#
+# The installed location of the MATLAB Runtime
+# If multiple runtime installations are available, then each runtime should be
+# specified in a separate line, for example:
+# 
+# All values for --mcr-root must be for the same OS/hardware combination 
+# (e.g., win32, win64, glnxa64, maci64)
+#
+--mcr-root C:\Program Files\MATLAB\MATLAB Runtime\R2023a
+
+################################################################################
+#
+# Worker Management Settings
+#
+################################################################################
+--num-workers 10
+--worker-restart-interval 2:00:00
+# DR: 2022-09-27 Modified from 12 hours to allow Python/.Net models to be reloaded quickly.
+--worker-restart-memory-limit 1GB
+--worker-restart-memory-limit-interval 1:00:00
+--worker-memory-check-interval 0:02:30
+
+# The following settings only apply if more than one MCR_Root is given
+#-------------------------------------------------------------------------------
+# If there is more than one --mcr-root, then a sub-pool of workers is maintained
+# for each --mcr-root.  When the total of the working set sizes of all worker
+# processes in all sub-pools exceeds --worker-memory-trigger, then the oldest
+# workers will be shut down until the total working set size of all worker
+# processes is below --worker-memory-target.
+--worker-memory-trigger 24GB
+--worker-memory-target 16GB
+
+# Example: (grow the worker pool when queue-time exceeds 500ms, until 
+# queue-time falls below 100ms)
+# --queue-time-trigger 0:00:00.5
+# --queue-time-target 0:00:00.1
+--queue-time-trigger 0:00:00.25
+--queue-time-target 0:00:00.25
+
+
+################################################################################
+#
+# Server Performance Tuning Settings
+#
+################################################################################
+# The number of request-processing threads within the main server
+--num-threads 2
+
+# profile
+# Syntax: --profile (on|off) OBJECT
+# Description of OBJECT:
+# server - information about server requests and workers
+# server.request - information about requests made to the server
+# server.request.archive - information about the archives in requests
+# server.request.client - information about the clients that make requests
+# server.worker and server.worker.pool - information about workers
+# 2022-12-08 10:27 DR - Profile some activity on the server to troubleshoot lockups
+--profile on server
+
+################################################################################
+#
+# Auto-Deployment Settings
+#
+################################################################################
+# CTF files are placed here for automatic deployment
+--auto-deploy-root ./auto_deploy
+
+#-------------------------------------------------------------------------------
+# async-deploy-on-startup delays deployment of the deployable archives until 
+# after the server starts. After starting, the server scans the folder specified
+# by the auto-deploy-root property for archives to deploy, then deploys them. 
+# Due to this delayed deployment, the archives are accessible only after the
+# server finishes deploying them and are not accessible immediately after the 
+# server starts. If you have several archives or large archives to deploy, 
+# then set this property to avoid server timeout on startup.
+--async-deploy-on-startup
+
+################################################################################
+#
+# Request Processing Settings
+#
+################################################################################
+# hide-matlab-error-stack
+# This option controls whether the MATLAB stack is exposed to the client.
+# The stack can be sent to the client during development/debug phase but
+# can be turned off in production.
+#
+# CCE: Since this is user-contributed calculation code, do not hide the MATLAB stack.
+# --hide-matlab-error-stack
+
+#-------------------------------------------------------------------------------
+# use-single-comp-thread
+# MATLAB uses multithreading capabilities of the computer on which it is
+# running. Enabling this option limits the number of computational threads
+# in MATLAB to 1.
+#
+#--use-single-comp-thread
+
+#-------------------------------------------------------------------------------
+# request-size-limit
+# Change the maximum allowed request size. See additional information about SIZE 
+# in the NOTES section above.
+#
+--request-size-limit 64MB
+
+
+################################################################################
+#
+# Log File/Rotation Settings
+#
+################################################################################
+
+# log-severity
+# Syntax: --log-severity error|information|trace
+#   error       - notification of problems or unexpected results
+#   warning     - events that could lead to problems if unaddressed
+#   information - high-level information about major server events
+#   trace       - detailed information about the internal state of the server 
+--log-severity information
+
+#-------------------------------------------------------------------------------
+# The maximum size to which the log can grow before it is rotated into the 
+# archive area.  If specified as less than 1MB, a warning will be issued and the
+# effective size will be increased to 1MB. See additional information about SIZE 
+# in the NOTES section above.
+--log-rotation-size 100MB
+--log-archive-root ./old_logs
+--log-archive-max-size 1GB
+--log-root ./log
+
+
+################################################################################
+#
+# License Management Settings
+#
+################################################################################
+--license 27000@aisrtbccce01
+--license-grace-period 2:30
+
+# After the license server has timed out or after the grace period has expired,
+# the server will periodically try to poll the license manager in order to 
+# check out the license again. 
+--license-poll-interval 0:10
+
+
+################################################################################
+# Do not modify these settings without consultation with Opti-Num Solutions
+#--merge-worker-streams
+--pid-root ./pid
+--endpoint-root ./endpoint
+--extract-root ./mcrroot
+--socket-root ./.mps_socket
+--main-log-format text/plain
+#--disable-control-c
+--enable-graceful-shutdown
+--no-display
+--enable-http-pipelining
+--http-linger-threshold 32KB
+--cors-allowed-origins *
+--request-timeout 2:00:00
+--server-memory-threshold 2GB
+--server-memory-threshold-overflow-action purge_responses
+--response-archive-root ./.response_archive
+--response-archive-limit 5GB
+--enable-discovery
+--enable-metrics
+# --log-handler text/plain cat
+# --server-termination-grace-period 00:02:30
+

@@ -1,0 +1,55 @@
+# Read and format data properties
+
+preprocessingAndFeatureEngineering :
+ # Preprocessing data properties
+
+    removeTransientData : True
+       
+    smoothBasicityResponse : False
+       
+    resampleTime : '1min'
+       
+    resampleMethod : 'zero'
+       
+    subModel : 'Chemistry'
+ 
+Logging:
+   LogName : 'SPO2.log'
+
+   CalculationID : 'SPO2'
+
+   LogLevel : 255
+
+   CalculationName : 'EvalSPO2'
+   
+Evaluate :
+    
+    modelPath : '../data/SPO2Model/TrainSPO2_2021-01-01_00.31.00_to_2021-12-31_23.17.00'
+    
+    NiSlagTarget : 0 
+
+    thresholdParam : 0.8
+    
+    subtractionParam : 0.2
+
+    multiplierParam : 1.85
+    
+    setFeMatteTarget : True
+
+    PSO2_const : 0.15
+
+    deadBand : 0
+    
+Train :
+    pathToThermo : '../data/thermoDataNewCombinations_v2.csv'
+    
+    writeTermsToSpreadsheet : False
+
+    refitModel : False
+
+    Path : 'data/SPO2Model/'
+    
+    ThermoModel : 'thermoMdl_Pickle_file.pickle'
+
+    ThermoExcel : 'NiSlagEquationOrder2.xlsx'
+    

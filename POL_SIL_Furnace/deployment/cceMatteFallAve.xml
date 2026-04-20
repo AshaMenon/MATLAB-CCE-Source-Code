@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.10.9.593" ExportMode="NoUniqueID, DefaultValues" PISystem="ons-opcdev" Database="CCE" Description="Local Production database for Continuous Calculation Engine" Created="2024-12-03T11:48:20.3767384Z" id="ca0488f3-dc46-48de-b46b-44248fce3edc" ParentKey="769419c0-2380-493e-904e-64f17c927fe8" ExportedObject="cceMatteFallAve" ExportedType="AFElementTemplate" Identity="ElementTemplate" PIPersist="189 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{979c1ef3-25dd-4b05-a0c9-b0461d3fb5ab}\ElementTemplates[{ca0488f3-dc46-48de-b46b-44248fce3edc}]*ons-opcdev\CCE\ElementTemplates[cceMatteFallAve]">
+  <AFElementTemplate>
+    <Name>cceMatteFallAve</Name>
+    <Description />
+    <BaseTemplateOnly>false</BaseTemplateOnly>
+    <BaseTemplate>CCECalculation</BaseTemplate>
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <DefaultAttribute />
+    <NamingPattern />
+    <DefaultInputPort />
+    <DefaultOutputPort />
+    <DefaultUndirectedPort />
+    <AFElementCategoryRef>CCE</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <Name>CalculationName</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>String</Type>
+      <TypeQualifier />
+      <Value type="String">cceCalcMatteFallFractionsAveWrapper</Value>
+      <DataReference />
+      <ConfigString />
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>DelayHrs</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">24</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEParameter</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ExecutionFrequencyParam</Name>
+      <Description>Execution frequency in minutes</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>Formula</DataReference>
+      <ConfigString>A=|ExecutionParameters|ExecutionFrequency;[A/60]</ConfigString>
+      <AFAttributeCategoryRef>CCEParameter</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>FeedAl2O3</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-60h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>FeedCaO</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-60h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">False</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>FeedCo</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-60h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">False</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>FeedCr2O3</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-60h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">False</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>FeedCu</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-60h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">False</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>FeedFe</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-60h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">False</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>FeedMgO</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-60h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">False</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>FeedNi</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-60h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">False</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>FeedS</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-60h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">False</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>FeedSiO2</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">*-60h,*,1m</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">False</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>MatteFallFraction</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>NSamples</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">3</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEParameter</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+  </AFElementTemplate>
+</AF>

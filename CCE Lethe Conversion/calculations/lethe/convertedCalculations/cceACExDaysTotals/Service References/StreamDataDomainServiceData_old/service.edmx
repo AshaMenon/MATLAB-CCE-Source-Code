@@ -1,0 +1,154 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0">
+    <Schema Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityType Name="WBrawData">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="DateIn" Type="Edm.DateTime" Nullable="false" ConcurrencyMode="Fixed" />
+        <Property Name="DateOut" Type="Edm.DateTime" Nullable="false" ConcurrencyMode="Fixed" />
+        <Property Name="Lot" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+        <Property Name="Batch" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+        <Property Name="Nett" Type="Edm.Double" />
+        <Property Name="Gross" Type="Edm.Double" />
+        <Property Name="WBCode" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="TruckReg" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="TrailerReg" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="HaulerName" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="SampleID" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="VehicleType" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="stBatch" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="stLot" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="MArawData">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="SampleDate" Type="Edm.DateTime" Nullable="false" ConcurrencyMode="Fixed" />
+        <Property Name="Lot" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+        <Property Name="Batch" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+        <Property Name="Value" Type="Edm.Double" Nullable="false" />
+        <Property Name="Plantcode" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="MACode" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="Assay" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="Timecode" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="stBatch" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityType Name="TransactionSummary">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="WBStream" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="MAStream" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="Direction" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="SourcePlant" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="PlantStreams" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="DestPlant" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="Material" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="MatCategory" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="IsEstimate" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+        <Property Name="c_Date" Type="Edm.DateTime" Nullable="false" ConcurrencyMode="Fixed" />
+        <Property Name="Lot" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+        <Property Name="UOM" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="Assay" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="Description" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="PeriodTotal" Type="Edm.Double" Nullable="false" />
+        <Property Name="PeriodAverage" Type="Edm.Double" Nullable="false" />
+        <Property Name="DayTotal" Type="Edm.Double" Nullable="false" />
+        <Property Name="DayAverage" Type="Edm.Double" Nullable="false" />
+      </EntityType>
+      <EntityType Name="StreamTotal">
+        <Key>
+          <PropertyRef Name="ID" />
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+        <Property Name="StreamTotalName" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="Day" Type="Edm.DateTime" Nullable="false" ConcurrencyMode="Fixed" />
+        <Property Name="Result" Type="Edm.Double" Nullable="false" />
+        <Property Name="UOM" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="PITag" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="ItemToCalc" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="CalcType" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="Message" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+        <Property Name="Plant" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+      </EntityType>
+      <EntityContainer Name="StreamDataDomainServiceData" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="WBrawDatas" EntityType="LightSwitchApplication.WBrawData" />
+        <EntitySet Name="MArawDatas" EntityType="LightSwitchApplication.MArawData" />
+        <EntitySet Name="TransactionSummaries" EntityType="LightSwitchApplication.TransactionSummary" />
+        <EntitySet Name="StreamTotals" EntityType="LightSwitchApplication.StreamTotal" />
+        <FunctionImport Name="GetWBRawTrans" EntitySet="WBrawDatas" ReturnType="Collection(LightSwitchApplication.WBrawData)" m:HttpMethod="GET">
+          <Parameter Name="dT_StartDate" Type="Edm.DateTime" Mode="In" />
+          <Parameter Name="dT_EndDate" Type="Edm.DateTime" Mode="In" />
+          <Parameter Name="s_WBserver" Type="Edm.String" Mode="In" />
+          <Parameter Name="b_ByDate" Type="Edm.Boolean" Mode="In" />
+          <Parameter Name="int_StartLot" Type="Edm.Int32" Mode="In" />
+          <Parameter Name="int_EndLot" Type="Edm.Int32" Mode="In" />
+        </FunctionImport>
+        <FunctionImport Name="GetMARawTrans" EntitySet="MArawDatas" ReturnType="Collection(LightSwitchApplication.MArawData)" m:HttpMethod="GET">
+          <Parameter Name="dT_StartDate" Type="Edm.DateTime" Mode="In" />
+          <Parameter Name="dT_EndDate" Type="Edm.DateTime" Mode="In" />
+          <Parameter Name="s_MAserver" Type="Edm.String" Mode="In" />
+          <Parameter Name="s_Plant" Type="Edm.String" Mode="In" />
+          <Parameter Name="b_AllBatch" Type="Edm.Boolean" Mode="In" />
+          <Parameter Name="timeCode" Type="Edm.String" Mode="In" />
+          <Parameter Name="s_Attributes" Type="Edm.String" Mode="In" />
+          <Parameter Name="b_ByDate" Type="Edm.Boolean" Mode="In" />
+          <Parameter Name="int_StartLot" Type="Edm.Int32" Mode="In" />
+          <Parameter Name="int_EndLot" Type="Edm.Int32" Mode="In" />
+        </FunctionImport>
+        <FunctionImport Name="RecDispSummary" EntitySet="TransactionSummaries" ReturnType="Collection(LightSwitchApplication.TransactionSummary)" m:HttpMethod="GET">
+          <Parameter Name="PlantCode" Type="Edm.String" Mode="In" />
+          <Parameter Name="Assays" Type="Edm.String" Mode="In" />
+          <Parameter Name="StartDate" Type="Edm.DateTime" Mode="In" />
+          <Parameter Name="EndDate" Type="Edm.DateTime" Mode="In" />
+          <Parameter Name="StartLot" Type="Edm.Int32" Mode="In" />
+          <Parameter Name="EndLot" Type="Edm.Int32" Mode="In" />
+          <Parameter Name="WBserver" Type="Edm.String" Mode="In" />
+          <Parameter Name="MAserver" Type="Edm.String" Mode="In" />
+          <Parameter Name="QueryByDate" Type="Edm.Boolean" Mode="In" />
+          <Parameter Name="AllBatches" Type="Edm.Boolean" Mode="In" />
+          <Parameter Name="TimeCodes" Type="Edm.String" Mode="In" />
+          <Parameter Name="UpdatewithPMAWeights" Type="Edm.Boolean" Mode="In" />
+          <Parameter Name="ShowLotsAsDates" Type="Edm.Boolean" Mode="In" />
+        </FunctionImport>
+        <FunctionImport Name="RecDispSummaryStringDates" EntitySet="TransactionSummaries" ReturnType="Collection(LightSwitchApplication.TransactionSummary)" m:HttpMethod="GET">
+          <Parameter Name="PlantCode" Type="Edm.String" Mode="In" />
+          <Parameter Name="Assays" Type="Edm.String" Mode="In" />
+          <Parameter Name="StartDate" Type="Edm.String" Mode="In" />
+          <Parameter Name="EndDate" Type="Edm.String" Mode="In" />
+          <Parameter Name="StartLot" Type="Edm.Int32" Mode="In" />
+          <Parameter Name="EndLot" Type="Edm.Int32" Mode="In" />
+          <Parameter Name="WBserver" Type="Edm.String" Mode="In" />
+          <Parameter Name="MAserver" Type="Edm.String" Mode="In" />
+          <Parameter Name="QueryByDate" Type="Edm.Boolean" Mode="In" />
+          <Parameter Name="AllBatches" Type="Edm.Boolean" Mode="In" />
+          <Parameter Name="TimeCodes" Type="Edm.String" Mode="In" />
+          <Parameter Name="UpdatewithPMAWeights" Type="Edm.Boolean" Mode="In" />
+          <Parameter Name="ShowLotsAsDates" Type="Edm.Boolean" Mode="In" />
+        </FunctionImport>
+        <FunctionImport Name="StreamTotalsData" EntitySet="StreamTotals" ReturnType="Collection(LightSwitchApplication.StreamTotal)" m:HttpMethod="GET">
+          <Parameter Name="PlantCode" Type="Edm.String" Mode="In" />
+          <Parameter Name="StartDate" Type="Edm.String" Mode="In" />
+          <Parameter Name="EndDate" Type="Edm.String" Mode="In" />
+          <Parameter Name="StartLot" Type="Edm.Int32" Mode="In" />
+          <Parameter Name="EndLot" Type="Edm.Int32" Mode="In" />
+          <Parameter Name="WBserver" Type="Edm.String" Mode="In" />
+          <Parameter Name="MAserver" Type="Edm.String" Mode="In" />
+          <Parameter Name="ShowMissing" Type="Edm.Boolean" Mode="In" />
+          <Parameter Name="QueryByDate" Type="Edm.Boolean" Mode="In" />
+          <Parameter Name="AllBatches" Type="Edm.Boolean" Mode="In" />
+          <Parameter Name="TimeCodes" Type="Edm.String" Mode="In" />
+          <Parameter Name="UpdatewithPMAWeights" Type="Edm.Boolean" Mode="In" />
+          <Parameter Name="ShowLotsAsDates" Type="Edm.Boolean" Mode="In" />
+        </FunctionImport>
+        <FunctionImport Name="Microsoft_LightSwitch_GetCanInformation" ReturnType="Edm.String" m:HttpMethod="GET">
+          <Parameter Name="dataServiceMembers" Type="Edm.String" Mode="In" />
+        </FunctionImport>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

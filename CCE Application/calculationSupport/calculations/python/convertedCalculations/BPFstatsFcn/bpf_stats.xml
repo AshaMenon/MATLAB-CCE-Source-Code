@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.10.9.593" ExportMode="DefaultValues" PISystem="acpmes" Database="WACP" Description="" Created="2021-11-10T06:50:48.7997376Z" id="9cea92b9-5b19-410d-8256-470a26f77f66" ParentKey="5c239f8e-8f19-4b2a-b903-f08254919f62" ExportedObject="bpf_stats" ExportedType="AFElementTemplate" Identity="ElementTemplate" PIPersist="180 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{979c1ef3-25dd-4b05-a0c9-b0461d3fb5ab}\ElementTemplates[{9cea92b9-5b19-410d-8256-470a26f77f66}]*acpmes\WACP\ElementTemplates[bpf_stats]">
+  <AFElementTemplate>
+    <id>9cea92b9-5b19-410d-8256-470a26f77f66</id>
+    <Name>bpf_stats</Name>
+    <Description>BPF Stats</Description>
+    <BaseTemplateOnly>false</BaseTemplateOnly>
+    <BaseTemplate>CCECalculation</BaseTemplate>
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <DefaultAttribute />
+    <NamingPattern />
+    <DefaultInputPort />
+    <DefaultOutputPort />
+    <DefaultUndirectedPort />
+    <AFElementCategoryRef id="10613004-39b8-4b38-9fcb-9ed2808369dd">CCE</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <id>f3a2b3e5-1d20-4094-a4c9-92660fa8f22c</id>
+      <Name>C80</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\ONS-OPCDEV?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%Attribute%;ReadOnly=False;ptclassname=classic;pointtype=Float64</ConfigString>
+      <AFAttributeCategoryRef id="acf6719d-5a1d-4b9c-b71d-948aff6e4027">CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <id>9b35f3a7-68a6-4900-b36c-4c88c22f32f3</id>
+      <Name>DateAsJS</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Boolean</Type>
+      <TypeQualifier />
+      <Value type="Boolean">False</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <id>f4717e57-7037-4192-b2f6-2f8920ea7393</id>
+      <Name>DateAsMatlab</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Boolean</Type>
+      <TypeQualifier />
+      <Value type="Boolean">True</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <id>fab01c53-d9db-400c-a2df-e94734aebbf6</id>
+      <Name>EstStdev</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\ONS-OPCDEV?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%Attribute%;ReadOnly=False;ptclassname=classic;pointtype=Float64</ConfigString>
+      <AFAttributeCategoryRef id="acf6719d-5a1d-4b9c-b71d-948aff6e4027">CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <id>32ef8cbf-942a-40bd-8b41-30d8e01bf9b1</id>
+      <Name>ExcludeData</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <id>d21e2122-902e-4527-83f5-7bb0650b10ce</id>
+      <Name>InputSensor</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\ONS-OPCDEV?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%Attribute%;ReadOnly=False;ptclassname=classic;pointtype=Float64</ConfigString>
+      <AFAttributeCategoryRef id="91ae3c11-34d0-4043-8e32-4e9bc441bcea">CCEInput</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <id>8f36a8ae-2ada-4596-9395-5f04401df437</id>
+        <Name>C80</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">NaN</Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <id>14267613-7069-4770-81db-20ffd4e6f34c</id>
+        <Name>LCL</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">NaN</Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <id>b75d91d9-4d41-4f1b-9d49-3d3e9681dad5</id>
+        <Name>P75</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">NaN</Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <id>a629b0eb-4e19-4ce6-a7e8-9ad30e8a7c08</id>
+        <Name>Quality</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference>PI Point</DataReference>
+        <ConfigString>\\ONS-OPCDEV?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%..|Attribute%.%Attribute%;ReadOnly=False;ptclassname=classic;pointtype=Float64</ConfigString>
+        <AFAttributeCategoryRef id="91ae3c11-34d0-4043-8e32-4e9bc441bcea">CCEInput</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <id>f1879810-f188-47de-8b12-bd3728d8e177</id>
+        <Name>RelativeTimeRange</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">t</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <id>07aae49f-7313-4c64-9f79-996e159049ea</id>
+        <Name>SensorHigh</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">NaN</Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <id>6b7fc34a-ca73-4e0d-aa3f-589050e09ce3</id>
+        <Name>SensorLow</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">NaN</Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <id>f4f944c3-6a28-4012-8068-a08e033f2873</id>
+        <Name>SensorType</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">APCAnalogInstrument</Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <id>8e708a58-bee8-49b5-b5c1-a952d2e5ae08</id>
+        <Name>TrendHigh</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">NaN</Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <id>3faaa4ad-563d-4e6e-88de-05774658a5f9</id>
+        <Name>TrendLow</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">NaN</Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <id>d458af4e-ff5f-4978-878b-5c7177bbc1ec</id>
+        <Name>UCL</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">NaN</Value>
+        <DataReference />
+        <ConfigString />
+        <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <id>b19a2b2e-dc5e-4420-8b81-415204ff74b7</id>
+        <Name>UseTimestamps</Name>
+        <Description />
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">True</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <id>b02bf10a-0e7a-49f2-bc37-8279bf410bf3</id>
+      <Name>Inverse</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <id>3faf008f-296c-4fba-a10f-9980b02d57d6</id>
+      <Name>LCL</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\ONS-OPCDEV?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%Attribute%;ReadOnly=False;ptclassname=classic;pointtype=Float64</ConfigString>
+      <AFAttributeCategoryRef id="acf6719d-5a1d-4b9c-b71d-948aff6e4027">CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <id>529dd692-69d0-4beb-b888-4076f6ca2ff2</id>
+      <Name>Mean</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\ONS-OPCDEV?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%Attribute%;ReadOnly=False;ptclassname=classic;pointtype=Float64</ConfigString>
+      <AFAttributeCategoryRef id="acf6719d-5a1d-4b9c-b71d-948aff6e4027">CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <id>9c53cb45-2c5b-467f-9535-612003457c86</id>
+      <Name>P75</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\ONS-OPCDEV?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%Attribute%;ReadOnly=False;ptclassname=classic;pointtype=Float64</ConfigString>
+      <AFAttributeCategoryRef id="acf6719d-5a1d-4b9c-b71d-948aff6e4027">CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <id>e88e3ef8-1593-4b39-b68d-b6e90a17df42</id>
+      <Name>RunRule</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <id>110dd031-da01-40db-8305-68bbd400dd2c</id>
+      <Name>StandardStd</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <id>d6ef3711-4bc9-4d5b-8868-fe585fc231e2</id>
+      <Name>UCL</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\ONS-OPCDEV?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%Attribute%;ReadOnly=False;ptclassname=classic;pointtype=Float64</ConfigString>
+      <AFAttributeCategoryRef id="acf6719d-5a1d-4b9c-b71d-948aff6e4027">CCEOutput</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <id>041777d1-3b90-4ce4-b0e2-d6d664d3cabf</id>
+      <Name>ZeroPoints</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0.00547945205479452</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef id="25842a88-6c1b-45c3-a8e6-e8aa5763d5df">CCEParameter</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+  </AFElementTemplate>
+</AF>

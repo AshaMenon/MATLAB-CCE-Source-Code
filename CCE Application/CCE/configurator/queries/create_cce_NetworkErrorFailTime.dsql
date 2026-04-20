@@ -1,0 +1,6 @@
+CREATE TABLE cce_NetworkErrorFailTime 
+
+(
+    CalculationID   VARCHAR, 
+    FailureTime     VARCHAR
+);

@@ -1,0 +1,4 @@
+Store all code that is ready to be deployed here
+
+One folder per build
+No untested/incompelete code goes here

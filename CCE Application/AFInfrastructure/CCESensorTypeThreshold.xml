@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.10.9.593" ExportMode="NoUniqueID, DefaultValues" PISystem="acpmes" Database="WACP" Description="" Created="2021-10-21T14:17:52.557111Z" id="10c0c0d7-f6ed-4a3f-8644-2d70dbf89dee" ParentKey="5c239f8e-8f19-4b2a-b903-f08254919f62" ExportedObject="CCESensorTypeThreshold" ExportedType="AFEnumerationSet" Identity="EnumerationSet" PIPersist="191 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{979c1ef3-25dd-4b05-a0c9-b0461d3fb5ab}\EnumerationSets[{10c0c0d7-f6ed-4a3f-8644-2d70dbf89dee}]*acpmes\WACP\EnumerationSets[CCESensorTypeThreshold]">
+  <AFEnumerationSet>
+    <Name>CCESensorTypeThreshold</Name>
+    <Description />
+    <AFEnumerationValue>
+      <Name>APCFlowTransmitter</Name>
+      <Value>4</Value>
+      <Description />
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>APCLevelTransmitter</Name>
+      <Value>2</Value>
+      <Description />
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Other</Name>
+      <Value>8</Value>
+      <Description />
+    </AFEnumerationValue>
+  </AFEnumerationSet>
+</AF>

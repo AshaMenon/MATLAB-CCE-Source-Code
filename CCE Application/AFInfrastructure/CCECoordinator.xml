@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.10.9.593" ExportMode="AllReferences, NoUniqueID, DefaultValues" PISystem="ons-opcdev" Database="WACP" Description="" Created="2024-08-19T13:52:49.4108946Z" id="834eae32-a8f2-4a0d-a56e-0eadf5aec67e" ParentKey="5c239f8e-8f19-4b2a-b903-f08254919f62" ExportedObject="CCECoordinator" ExportedType="AFElementTemplate" Identity="ElementTemplate" PIPersist="189 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{979c1ef3-25dd-4b05-a0c9-b0461d3fb5ab}\ElementTemplates[{834eae32-a8f2-4a0d-a56e-0eadf5aec67e}]*ons-opcdev\WACP\ElementTemplates[CCECoordinator]">
+  <AFElementCategory>
+    <Name>CCE</Name>
+    <Description>Continuous Calculation Engine</Description>
+  </AFElementCategory>
+  <AFEnumerationSet>
+    <Name>CCECoordinatorState</Name>
+    <Description>State of CCE Coordinators</Description>
+    <AFEnumerationValue>
+      <Name>Backfilling</Name>
+      <Value>4</Value>
+      <Description>Completing prior time periods.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Disabled</Name>
+      <Value>0</Value>
+      <Description>Temporarily disabled while we try to fix something. Stops the rot from spreading.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Executing</Name>
+      <Value>5</Value>
+      <Description>Completing current time period</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>ForDeletion</Name>
+      <Value>7</Value>
+      <Description>Coordinator has a zero Calculation load and must be deleted from the Coordinator Database.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Idle</Name>
+      <Value>3</Value>
+      <Description>Waiting for trigger.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>NotRunning</Name>
+      <Value>1</Value>
+      <Description>Coordinator is not running at the moment but is perfectly healthy. Waiting for a Scheduler to start it.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>ShuttingDown</Name>
+      <Value>6</Value>
+      <Description>Shutting down; lifetime exceeded.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Starting</Name>
+      <Value>2</Value>
+      <Description>Starting up; fetching calculation configurations</Description>
+    </AFEnumerationValue>
+  </AFEnumerationSet>
+  <AFEnumerationSet>
+    <Name>CCECoordinatorExecutionMode</Name>
+    <Description>Execution Mode of a Coordinator</Description>
+    <AFEnumerationValue>
+      <Name>Cyclic</Name>
+      <Value>1</Value>
+      <Description>Runs repeated cycles every ExecutionPeriod seconds until Lifetime is reached, then exits</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Event</Name>
+      <Value>2</Value>
+      <Description>Runs in response to events, until Lifetime is reached, then exits</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Manual</Name>
+      <Value>3</Value>
+      <Description>Manual execution; run calculations once</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Single</Name>
+      <Value>0</Value>
+      <Description>Runs calculations once (possibly with backfill) then exits</Description>
+    </AFEnumerationValue>
+  </AFEnumerationSet>
+  <AFEnumerationSet>
+    <Name>CCELogLevel</Name>
+    <Description>Log level and below principle is used.</Description>
+    <AFEnumerationValue>
+      <Name>All</Name>
+      <Value>255</Value>
+      <Description>All messages</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Debug</Name>
+      <Value>4</Value>
+      <Description>Debug messages and all below.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Error</Name>
+      <Value>1</Value>
+      <Description>Error; code is likely to have failed.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Info</Name>
+      <Value>3</Value>
+      <Description>Informative messages</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>None</Name>
+      <Value>0</Value>
+      <Description>Log no messages</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Trace</Name>
+      <Value>5</Value>
+      <Description>Trace messages. Significant detail.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Warning</Name>
+      <Value>2</Value>
+      <Description>Warnings; code will continue</Description>
+    </AFEnumerationValue>
+  </AFEnumerationSet>
+  <AFElementTemplate>
+    <Name>CCECoordinator</Name>
+    <Description>CCE Coordinator Template</Description>
+    <BaseTemplateOnly>false</BaseTemplateOnly>
+    <BaseTemplate />
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>true</AllowElementToExtend>
+    <DefaultAttribute />
+    <NamingPattern />
+    <DefaultInputPort />
+    <DefaultOutputPort />
+    <DefaultUndirectedPort />
+    <AFElementCategoryRef>CCE</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <Name>CalculationLoad</Name>
+      <Description>Number of calculations managed by Coordinator</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-4</DisplayDigits>
+      <Type>Int32</Type>
+      <TypeQualifier />
+      <Value type="Int32">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInternalConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>CoordinatorID</Name>
+      <Description>Unique ID of the coordinator within CCE</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Int32</Type>
+      <TypeQualifier />
+      <Value type="Int32">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>CoordinatorState</Name>
+      <Description>State of the Coordinator</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>0</DisplayDigits>
+      <Type>AFEnumerationValue</Type>
+      <TypeQualifier type="AFObject">EnumerationSets[CCECoordinatorState]</TypeQualifier>
+      <Value type="AFEnumerationValue">EnumerationSets[CCECoordinatorState]\NotRunning</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\ons-opcdev?21031610-dc91-452c-9286-f25d6853ee39\%Database%.%Element%.%Attribute%;ReadOnly=False;pointtype=Digital;digitalset=CCECoordinatorState</ConfigString>
+      <AFAttributeCategoryRef>CCEInternalConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ExecutionFrequency</Name>
+      <Description>Period of execution for Periodic Coordinator; NaN for Event-based, Single or Manual ExecutionMode</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM>s</DefaultUOM>
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">NaN</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ExecutionMode</Name>
+      <Description>Mode of execution for this Coordinator</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>0</DisplayDigits>
+      <Type>AFEnumerationValue</Type>
+      <TypeQualifier type="AFObject">EnumerationSets[CCECoordinatorExecutionMode]</TypeQualifier>
+      <Value type="AFEnumerationValue">EnumerationSets[CCECoordinatorExecutionMode]\Cyclic</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ExecutionOffset</Name>
+      <Description>Offset from Midnight of Execution cycles</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM>s</DefaultUOM>
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Lifetime</Name>
+      <Description>Lifetime of Coordinator (in seconds) - set by Configurator</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM>s</DefaultUOM>
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>LogParameters</Name>
+      <Description>Parameters controlling logging</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>String</Type>
+      <TypeQualifier />
+      <Value type="String"></Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>LogLevel</Name>
+        <Description>Enumeration list in order: debug, info, warning, error - will log to selected level and above.</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>AFEnumerationValue</Type>
+        <TypeQualifier type="AFObject">EnumerationSets[CCELogLevel]</TypeQualifier>
+        <Value type="AFEnumerationValue">EnumerationSets[CCELogLevel]\Warning</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>LogName</Name>
+        <Description>Name of logfile.</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">coordinator.log</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>MaxCalculationLoad</Name>
+      <Description>Maximum allowable number of calculations that the coordinator has. If zero, the System Config value will be used. </Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Int32</Type>
+      <TypeQualifier />
+      <Value type="Int32">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ReenableSystemDisabledCalcs</Name>
+      <Description>Request that all system disabled calculations on given coordinator are reenabled</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Boolean</Type>
+      <TypeQualifier />
+      <Value type="Boolean">False</Value>
+      <DataReference />
+      <ConfigString />
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>RequestToDisable</Name>
+      <Description>Set to true to request that a running Coordinator disable itself</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Boolean</Type>
+      <TypeQualifier />
+      <Value type="Boolean">False</Value>
+      <DataReference />
+      <ConfigString />
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>RetryFrequency</Name>
+      <Description>Amount of time to wait before rerunning calc after network error</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Double</Type>
+      <TypeQualifier />
+      <Value type="Double">300</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>SkipBackfill</Name>
+      <Description>If enabled auto backfill is disabled for highly lagging calcs</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Boolean</Type>
+      <TypeQualifier />
+      <Value type="Boolean">False</Value>
+      <DataReference />
+      <ConfigString />
+    </AFAttributeTemplate>
+  </AFElementTemplate>
+</AF>

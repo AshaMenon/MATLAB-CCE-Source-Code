@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.10.9.593" ExportMode="NoUniqueID, DefaultValues" PISystem="ons-opcdev" Database="CCEProd" Description="Local Production database for Continuous Calculation Engine" Created="2023-07-28T13:30:59.0109559Z" id="ca26df5c-cff2-4d81-a9c5-f98c466c0f47" ParentKey="769419c0-2380-493e-904e-64f17c927fe8" ExportedObject="CCESystemDisabled" ExportedType="AFElementTemplate" Identity="ElementTemplate" PIPersist="195 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{979c1ef3-25dd-4b05-a0c9-b0461d3fb5ab}\ElementTemplates[{ca26df5c-cff2-4d81-a9c5-f98c466c0f47}]*ons-opcdev\CCEProd\ElementTemplates[CCESystemDisabled]">
+  <AFElementTemplate>
+    <Name>CCESystemDisabled</Name>
+    <Description>CCE Calculation disabled by system due to re-occuring error.</Description>
+    <BaseTemplateOnly>false</BaseTemplateOnly>
+    <BaseTemplate />
+    <Type>None</Type>
+    <InstanceType>EventFrame</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <DefaultAttribute />
+    <NamingPattern>CCE-%ELEMENT%-%STARTTIME:yyyyMMddHHmmss%</NamingPattern>
+    <DefaultInputPort />
+    <DefaultOutputPort />
+    <DefaultUndirectedPort />
+    <Severity>0</Severity>
+    <CanBeAcknowledged>false</CanBeAcknowledged>
+    <AFElementCategoryRef>CCE</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <Name>CalculationState</Name>
+      <Description />
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>AFEnumerationValue</Type>
+      <TypeQualifier type="AFObject">EnumerationSets[CCECalculationState]</TypeQualifier>
+      <Value />
+      <DataReference>PI Point</DataReference>
+      <ConfigString>.\Elements[.]|CalculationState;TimeRangeMethod=StartTime</ConfigString>
+    </AFAttributeTemplate>
+  </AFElementTemplate>
+</AF>

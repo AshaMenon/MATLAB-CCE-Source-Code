@@ -1,0 +1,79 @@
+// Function Signatures
+// To optionally specify argument types and/or sizes, search for "type"
+// and insert the appropriate specifiers inside the brackets. For example:
+//
+//    "type": ["double", "size=1,1"]
+//
+// To modify function or parameter help text, search for "purpose" and edit
+// the values.
+//
+// JSON-formatted text below this line.
+{
+    "_schemaVersion": "1.1.0",
+    "controllerAnalysis": {
+        "inputs": [
+            {   "name": "parameters",
+                "type": ["struct", "size=N,1"],
+                "purpose":""
+            },
+            {
+                "name": "sensorDataPV",
+                "type": ["struct", "size=N,1"],
+                "purpose": ""
+            },
+            {
+                "name": "sensorDataSP",
+                "type": ["double", "size=N,1"],
+                "purpose": ""
+            },
+            {
+                "name": "sensorDataMV",
+                "type": ["struct", "size=N,1"],
+                "purpose": ""
+            },
+            {
+                "name": "sensorDataAutoman",
+                "type": ["double", "size=1,1"],
+                "purpose": ""
+            },
+			{
+                "name": "sensorQualityPV",
+                "type": ["double", "size=N,1"],
+                "purpose": ""
+            },
+			{
+                "name": "sensorQualitySP",
+                "type": ["double", "size=N,1"],
+                "purpose": ""
+            },
+			{
+                "name": "sensorQualityMV",
+                "type": ["double", "size=N,1"],
+                "purpose": ""
+            },
+			{
+                "name": "sensorQualityAutoman",
+                "type": ["double", "size=1,1"],
+                "purpose": ""
+            },
+			{
+                "name": "qualityValLookUp",
+                "type": ["struct", "size=N,1"],
+                "purpose": ""
+            }
+        ],
+        "outputs": [
+            {
+                "name": "controllerQuality",
+                "type": ["double", "size=1,1"],
+                "purpose": ""
+            },
+            {
+                "name": "rootCause",
+                "type": ["double", "size=1,1"],
+                "purpose": ""
+            }
+        ],
+        "purpose": ""
+    }
+}

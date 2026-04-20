@@ -1,0 +1,30 @@
+data/
+env/slag-splash-env/
+.spyproject/
+virtualenv/
+slprj/
+
+# Cache Files
+*.pyc
+.idea/workspace.xml
+*.slxc
+*.original
+
+# Images Files
+*.png
+*.jpg
+
+# Others 
+.*UnitTestResults.xml
+
+*.txt
+*.json
+*.dat
+*.csv
+*.coverage
+*.pickle
+helpers/slprj/*
+*.log
+*.asv
+*.mat
+modelOut/

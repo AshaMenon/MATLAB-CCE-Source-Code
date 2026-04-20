@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struct>
+    <R>1.9828</R>
+    <r_s>0.028415</r_s>
+    <r_m>0.01514</r_m>
+    <alpha_Fe>0.99393</alpha_Fe>
+    <alpha_Ni>0.096297</alpha_Ni>
+    <alpha_Co>0.99219</alpha_Co>
+    <alpha_Cu>0.49748</alpha_Cu>
+    <delta_Ts>112.1542</delta_Ts>
+    <T_furnace>1370.4491</T_furnace>
+    <epsilon>0.89877</epsilon>
+    <m_dot_dust_and_accr>1.5461</m_dot_dust_and_accr>
+    <U>5699.8192</U>
+</struct>

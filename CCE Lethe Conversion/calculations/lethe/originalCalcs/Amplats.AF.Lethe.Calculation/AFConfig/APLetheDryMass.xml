@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.7.5.7166" ExportMode="NoUniqueID" PISystem="cenmes" Database="Training01" Description="AAP Central OPM AF" Created="2016-03-23T11:52:34.1574303Z" id="08961370-d470-4c1c-a3da-909e33149cef" ParentKey="b51612d4-96ac-40af-a692-36aa0a84b45e" ExportedObject="APLetheDryMass" ExportedType="AFElementTemplate" Identity="ElementTemplate" PIPersist="191 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{3e99b57b-cbf9-41fd-a939-95e74e8f624e}\ElementTemplates[{08961370-d470-4c1c-a3da-909e33149cef}]*cenmes\Training01\ElementTemplates[APLetheDryMass]">
+  <AFElementTemplate>
+    <Name>APLetheDryMass</Name>
+    <BaseTemplate>APLetheCalculations</BaseTemplate>
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>false</AllowElementToExtend>
+    <AFAttributeTemplate>
+      <Name>CalculateAtTime</Name>
+      <Description>Time in seconds after midnight for the first calculation result</Description>
+      <Type>Double</Type>
+      <Value type="Double">21601</Value>
+      <AFAttributeCategoryRef>Configuration</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>CalculationPeriod</Name>
+      <Description>Time in seconds between calculation results</Description>
+      <Type>Double</Type>
+      <Value type="Double">86400</Value>
+      <AFAttributeCategoryRef>Configuration</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>CalculationPeriodOffset</Name>
+      <Description>Starts calculation a number of periods offset from the start</Description>
+      <Type>Double</Type>
+      <Value type="Double">-1</Value>
+      <AFAttributeCategoryRef>Configuration</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>CalulationPeriodsToRun</Name>
+      <Description>Runs the calculation for a set number of periods</Description>
+      <Type>Double</Type>
+      <Value type="Double">-5</Value>
+      <AFAttributeCategoryRef>Configuration</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>DryMass</Name>
+      <Description>Dry Mass output</Description>
+      <Type>Double</Type>
+      <Value type="Double">0</Value>
+      <AFAttributeCategoryRef>Output</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Estimate</Name>
+      <Description>Current moisture estimate</Description>
+      <Type>Double</Type>
+      <Value type="Double">0</Value>
+      <AFAttributeCategoryRef>Input</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>Moisture</Name>
+      <Description>Actual moisture values</Description>
+      <Type>Double</Type>
+      <Value type="Double">0</Value>
+      <AFAttributeCategoryRef>Input</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>WetMass</Name>
+      <Description>Input wet mass</Description>
+      <Type>Double</Type>
+      <Value type="Double">0</Value>
+      <AFAttributeCategoryRef>Input</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+  </AFElementTemplate>
+</AF>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.10.9.593" ExportMode="StrongReferences" PISystem="acpmes" Created="2022-01-04T08:38:19.0825024Z" ExportedObject="NamedCollectionList" ExportedType="AFNamedCollectionList`1" Identity="CategoryAttribute">
+  <AFAttributeCategory>
+    <id>9bea463f-7358-4a03-93b2-2407695c2c9f</id>
+    <Name>CCEBackfilling</Name>
+  </AFAttributeCategory>
+  <AFAttributeCategory>
+    <id>0f7a30a0-3808-4a4b-9c37-035b8bf42d06</id>
+    <Name>CCEConfig</Name>
+  </AFAttributeCategory>
+  <AFAttributeCategory>
+    <id>b454cd1b-d26b-4e57-a896-7f8cc1111a78</id>
+    <Name>CCEInput</Name>
+  </AFAttributeCategory>
+  <AFAttributeCategory>
+    <id>14f045f7-50cd-4262-8196-c80c956e5f2b</id>
+    <Name>CCEInternalConfig</Name>
+  </AFAttributeCategory>
+  <AFAttributeCategory>
+    <id>7a54f0fd-21c9-46cb-92cd-d9bd6ffc76a5</id>
+    <Name>CCELogParameter</Name>
+  </AFAttributeCategory>
+  <AFAttributeCategory>
+    <id>53dbffef-150a-4f03-a0d4-cdf5dfea8bc9</id>
+    <Name>CCEOutput</Name>
+  </AFAttributeCategory>
+  <AFAttributeCategory>
+    <id>ae6432f3-6c22-48f2-b581-13038103a867</id>
+    <Name>CCEParameter</Name>
+  </AFAttributeCategory>
+  <AFAttributeCategory>
+    <id>5ae17ef0-ade3-42ea-b04b-095bd3470c2b</id>
+    <Name>CCETrigger</Name>
+  </AFAttributeCategory>
+</AF>

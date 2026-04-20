@@ -1,0 +1,21 @@
+default:
+  image:
+    name: matlab:CICD
+    entrypoint: [""]
+   
+variables:
+    GIT_SUBMODULE_STRATEGY: recursive 
+    GIT_STRATEGY: clone
+
+unit-tests:
+    stage: test
+    script:
+      - matlab -batch "addpath('test'), assertSuccess(runLoggerTests(true));"
+    coverage: '/(\d+\.\d+%)/'
+    artifacts:
+      reports: 
+        junit: UnitTestResults.xml
+        coverage_report:
+          coverage_format: cobertura
+          path: CodeCoverageResults.xml
+

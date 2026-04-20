@@ -1,0 +1,48 @@
+# Read and format data properties
+
+highFreqPredictors:   ["Specific Oxygen Actual PV",
+                      "Specific Silica Actual PV", "Matte feed PV(filtered)",
+                      "Lance oxygen flow rate PV", "Lance air flow rate PV",
+                      "Lance feed PV", "Silica PV", "Lump Coal PV",
+                      "Matte transfer air flow", "Fuel coal feed rate PV"]
+
+lowFreqPredictors : ["Fe Slag", "MgO Slag", "CaO Slag", "SiO2 Slag", "Al2O3 Slag",
+                     "Ni Slag", "S Slag", "S Matte", "Slag temperatures",
+                     "Matte temperatures", "Fe Feedblend", "S Feedblend",
+                     "SiO2 Feedblend", "Al2O3 Feedblend", "CaO Feedblend",
+                     "MgO Feedblend", "Cr2O3 Feedblend", "Corrected Ni Slag",
+                     "Fe Matte"]
+
+responseTags : ["Basicity"] 
+
+subModel : 'Chemistry'
+
+# Preprocessing data properties
+
+addRollingSumPredictors : {'add': True, 'window': 19}
+
+addRollingMeanPredictors: {'add': True, 'window': 5}
+
+addMeasureIndicatorsAsPredictors: {'add': True}
+
+addShiftsToPredictors: {'add': True, 'nLags': 3}
+
+addResponsesAsPredictors: {'add': True, 'nLags': 5}
+
+addShiftsToPredictors : {'add': True, 'nLags': 3}
+
+addResponsesAsPredictors : {'add': True, 'nLags': 5}
+
+resampleTime : '1min'
+
+resampleMethod : 'cubic'
+
+# split into test and train
+
+trainingFraction : 0.85
+
+maxTrainSize : 47
+
+testSize : 7
+
+path = data/

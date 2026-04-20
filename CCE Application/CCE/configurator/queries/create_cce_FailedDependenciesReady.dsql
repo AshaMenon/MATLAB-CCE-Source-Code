@@ -1,0 +1,7 @@
+CREATE TABLE cce_FailedDependenciesReady 
+
+(
+    CalculationID   VARCHAR, 
+    OutputTime      VARCHAR, 
+    FailureTime     VARCHAR
+);

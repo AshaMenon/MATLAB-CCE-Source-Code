@@ -1,0 +1,15 @@
+This is the build area for CCE.
+
+All buildable components must go here, including:
++ Sample calculation models for Production Server, including source in whatever language.
++ Classes we are developing for other languages (.Net PiListener class, for instance)
+
+You may (should) have subfolders for each component that gets built.
+You might want a subfolder for a specific type of buildable component, e.g., build/calcMATLAB/plusTwo.m
+
+All buildable components must have a corresponding "build" command script (don't rely on an IDE or Build App)
+All build scripts must be located in the root of this folder, e.g., build/makePiListener.cmd
+The build script must deploy the component to the right place.
+Build scripts must make use of %TEMP% for intermediate outputs, and/or must clean up after themselves. After running a successful build, there should be no extra files in the project folder beyond the built artefact.
+
+Add your built artefact (.Net Class file, CTF, etc) to .gitignore when checking in the build script.

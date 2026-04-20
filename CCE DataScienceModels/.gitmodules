@@ -1,0 +1,6 @@
+[submodule "Shared/DSModel"]
+	path = Shared/DSModel
+	url = https://ons-gitlab.optinum.local/customers/anglo-american/data-science/anglo-ds-model.git
+[submodule "test/MATLAB Tests/sharedlogger"]
+	path = test/MATLAB Tests/sharedlogger
+	url = https://ons-gitlab.optinum.local/shared/function-library/sharedlogger.git

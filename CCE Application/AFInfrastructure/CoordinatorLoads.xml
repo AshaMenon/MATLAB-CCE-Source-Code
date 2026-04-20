@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.10.9.593" ExportMode="AllReferences, NoUniqueID, DefaultValues" PISystem="ons-opcdev" Database="WACP" Description="" Created="2024-10-16T07:52:30.4822761Z" id="889922f5-3f70-472a-9f7f-65a9c971aa29" ParentKey="5c239f8e-8f19-4b2a-b903-f08254919f62" ExportedObject="CoordinatorLoads" ExportedType="AFTable" Identity="Table" PIPersist="171 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{979c1ef3-25dd-4b05-a0c9-b0461d3fb5ab}\Tables[{889922f5-3f70-472a-9f7f-65a9c971aa29}]*ons-opcdev\WACP\Tables[CoordinatorLoads]">
+  <AFTable>
+    <Name>CoordinatorLoads</Name>
+    <Description>A list of coordinator loads for different execution frequencies</Description>
+    <TimeZone />
+    <ConvertToLocalTime>true</ConvertToLocalTime>
+    <CacheInterval>0</CacheInterval>
+    <ExternalPersist>false</ExternalPersist>
+    <Schema>
+<xs:schema id="CoordinatorLoadsDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="CoordinatorLoadsDataSet" msdata:IsDataSet="true" msdata:Locale="">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CoordinatorLoads" msdata:Locale="">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ExecutionFrequency" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="CoordinatorLoad" type="xs:int" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema></Schema>
+    <DataTable><CoordinatorLoadsDataSet><CoordinatorLoads><ExecutionFrequency>60</ExecutionFrequency><CoordinatorLoad>3</CoordinatorLoad></CoordinatorLoads><CoordinatorLoads><ExecutionFrequency>900</ExecutionFrequency><CoordinatorLoad>30</CoordinatorLoad></CoordinatorLoads><CoordinatorLoads><ExecutionFrequency>1800</ExecutionFrequency><CoordinatorLoad>100</CoordinatorLoad></CoordinatorLoads><CoordinatorLoads><ExecutionFrequency>3600</ExecutionFrequency><CoordinatorLoad>250</CoordinatorLoad></CoordinatorLoads></CoordinatorLoadsDataSet></DataTable>
+    <Modifier>OPTINUM\Mlondi.Caluza</Modifier>
+    <Comment />
+    <EffectiveDate>1970-01-01T00:00:00Z</EffectiveDate>
+    <ObsoleteDate>9999-12-31T23:59:59Z</ObsoleteDate>
+  </AFTable>
+</AF>

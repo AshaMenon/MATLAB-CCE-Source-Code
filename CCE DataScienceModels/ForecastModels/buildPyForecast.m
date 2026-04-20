@@ -1,0 +1,1 @@
+buildCalc("ccePyForecastConcKpi", {'ccePyForecastConcKpi'},{''});

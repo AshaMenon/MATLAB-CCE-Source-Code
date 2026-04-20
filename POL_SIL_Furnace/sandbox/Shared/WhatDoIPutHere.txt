@@ -1,0 +1,3 @@
+Linked submodules go in here
+
+One folder per submodule

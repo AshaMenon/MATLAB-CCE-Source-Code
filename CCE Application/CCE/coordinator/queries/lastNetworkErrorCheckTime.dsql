@@ -1,0 +1,4 @@
+SELECT	ifnull(FailureTime, '')
+FROM	cce_NetworkErrorFailTime
+
+WHERE	CalculationID = '%CALCULATIONID%'

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struct>
+    <R>1.9929</R>
+    <r_s>0.028651</r_s>
+    <r_m>0.014937</r_m>
+    <vFactor_m>0.90217</vFactor_m>
+    <vFactor_s>0.48372</vFactor_s>
+    <alpha_Fe>0.99997</alpha_Fe>
+    <alpha_Ni>0.09985</alpha_Ni>
+    <alpha_Co>0.99991</alpha_Co>
+    <alpha_Cu>0.49989</alpha_Cu>
+    <delta_Ts>182.598</delta_Ts>
+    <T_furnace>1457.3155</T_furnace>
+    <epsilon>0.94925</epsilon>
+    <m_dot_dust_and_accr>0.37695</m_dot_dust_and_accr>
+    <U>4803.423</U>
+</struct>

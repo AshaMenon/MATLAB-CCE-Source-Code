@@ -1,0 +1,80 @@
+# Read and format data properties
+
+preprocessingAndFeatureEngineering :
+  # Preprocessing data properties
+
+  removeTransientData : True
+
+  smoothBasicityResponse : True
+
+  addRollingSumPredictors : {'add': True, 'window': '19min'}
+
+  addRollingMeanPredictors: {'add': True, 'window': '5min'}
+
+  addResponsesAsPredictors: {'add': True, 'nLags': 1}
+
+  resampleTime : '1min'
+
+  resampleMethod : 'linear'
+  
+  SpSiCountThreshold : 8
+  
+  cleanResponseTags : True
+
+subModel : 'Chemistry'
+  # split into test and train
+
+Training :
+  trainFrac : 0.85
+
+  maxTrainSize : 100800
+
+  testSize : 10080
+
+  numIters : 20
+
+  pretrainedModelFileName : 'Linear_2021-01-01_01.50.00_to_2021-12-31_23.16.00'
+  
+Logging:
+  LogName : 'Basicity.log'
+
+  CalculationID : 'TLB'
+
+  LogLevel : 255
+
+  CalculationName : 'TestLinearBasicity'
+  
+  Path : '../data/BasicityModel/'
+  
+pretrainedModelFileName : 'Linear_2021-01-01_01.50.00_to_2021-12-31_23.16.00'
+
+Evaluate :
+    ModelPath : '../data/BasicityModel/2022_XGBoost_Basicity_Model_2022-01-01_05.03.00_to_2022-09-01_00.00.00'
+    
+    basicityTarget : 1.75
+    
+    deadBand : 0
+    silicaHighMin : 32
+    silicaHighMax : 60
+    silicaLowMin : -60
+    silicaLowMax : -32
+
+    hoursOff : 8
+    nPeaksOff : 3
+    isOnline : 1
+    BlowCountParams : 2
+    
+    RequiredChangeInSpSiParam : 0
+    BasicityDeltaParam : 0
+    
+    BasicityLowMid : 1.65
+    BasicityHighMid : 1.85
+    BasicityThresholdMid : 0.03
+    BasicityTimeMid : 6.0
+    
+    BasicityLowMax : 1.5
+    BasicityHighMax : 2.0
+    BasicityThresholdMax : 0.02
+    BasicityTimeMax : 4.0
+    
+    basicityGradientThreshold: 0.00001

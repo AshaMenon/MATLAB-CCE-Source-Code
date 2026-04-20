@@ -1,0 +1,7 @@
+{
+"BackfillDay" : 30,
+"PullRangeHours" : 1,
+"UpdateInterval" : "every 15 minutes",
+"Grid" : "1min"
+"Model Path" : "SlagTempMdl.pkl"
+}

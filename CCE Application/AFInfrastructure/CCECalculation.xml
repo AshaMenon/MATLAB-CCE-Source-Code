@@ -1,0 +1,854 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.10.9.593" ExportMode="AllReferences, NoUniqueID, DefaultValues" PISystem="ons-opcdev" Database="WACP" Description="" Created="2024-08-19T13:48:58.2355967Z" id="0f9b8070-59ed-45d2-b991-5ab8940eeea7" ParentKey="5c239f8e-8f19-4b2a-b903-f08254919f62" ExportedObject="CCECalculation" ExportedType="AFElementTemplate" Identity="ElementTemplate" PIPersist="189 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{979c1ef3-25dd-4b05-a0c9-b0461d3fb5ab}\ElementTemplates[{0f9b8070-59ed-45d2-b991-5ab8940eeea7}]*ons-opcdev\WACP\ElementTemplates[CCECalculation]">
+  <AFElementCategory>
+    <Name>CCE</Name>
+    <Description>Continuous Calculation Engine</Description>
+  </AFElementCategory>
+  <AFEnumerationSet>
+    <Name>CCEBackfillOverwrite</Name>
+    <Description />
+    <AFEnumerationValue>
+      <Name>All</Name>
+      <Value>2</Value>
+      <Description>Overwrite the primary calculation and its dependents.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>None</Name>
+      <Value>0</Value>
+      <Description>No overwriting, only fill-in missing timestamps when backfilling</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>PrimaryOnly</Name>
+      <Value>1</Value>
+      <Description>Overwrite the primary calculation only. Fill-in the gaps of any dependent calculations.</Description>
+    </AFEnumerationValue>
+  </AFEnumerationSet>
+  <AFEnumerationSet>
+    <Name>CCECalculationBackfillState</Name>
+    <Description />
+    <AFEnumerationValue>
+      <Name>Error</Name>
+      <Value>4</Value>
+      <Description>An error was returned during the backfilling process and the backfilling stopped and has been placed in an error state</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Finished</Name>
+      <Value>3</Value>
+      <Description>Backfilling has successfully run for the backfilling parameters and has completed the backfilling</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Off</Name>
+      <Value>0</Value>
+      <Description>No backfilling is running or requested</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Requested</Name>
+      <Value>1</Value>
+      <Description>Request backfilling for the given backfilling parameters</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Running</Name>
+      <Value>2</Value>
+      <Description>Backfilling is in progress</Description>
+    </AFEnumerationValue>
+  </AFEnumerationSet>
+  <AFEnumerationSet>
+    <Name>CCECalculationError</Name>
+    <Description />
+    <AFEnumerationValue>
+      <Name>Bad</Name>
+      <Value>307</Value>
+      <Description>Bad state.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>BadInput</Name>
+      <Value>255</Value>
+      <Description>Interfaces use this state to indicate that a device is reporting bad status.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>CalcFailed</Name>
+      <Value>249</Value>
+      <Description>Calculation Failed state.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>CalcOff</Name>
+      <Value>245</Value>
+      <Description>Calculations Off state.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>CalculationNameUnknown</Name>
+      <Value>1</Value>
+      <Description>The ComponentName parameter is not known on the server.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>CalculationServerInvalid</Name>
+      <Value>0</Value>
+      <Description>The CalculationServer parameter is incorrectly configured.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>CalculationStateInvalid</Name>
+      <Value>4</Value>
+      <Description>The CalculationState parameter is not a PI Point, or the PI Point is not available or is not a digital state type.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>CircularDependencyChain</Name>
+      <Value>12</Value>
+      <Description>The Calculation is part of a circular dependency chain.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>CommFail</Name>
+      <Value>313</Value>
+      <Description>Comm Fail state.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>ConfigurationError</Name>
+      <Value>14</Value>
+      <Description>General Calculation configuration error - missing PI Points or Attributes are unexpected datatypes.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>DependentInputsNotReady</Name>
+      <Value>15</Value>
+      <Description>Calculation's Dependent inputs do not have timestamps available for the checked output time</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>ExecutionFrequencyInvalid</Name>
+      <Value>2</Value>
+      <Description>The execution frequency is set to 0 or is missing for a Cyclic calculation.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Good</Name>
+      <Value>305</Value>
+      <Description>Good state.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>InputConfigInvalid</Name>
+      <Value>6</Value>
+      <Description>An input configuration is not defined properly.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>InputTimeRangeInvalid</Name>
+      <Value>7</Value>
+      <Description>An input’s RelativeTimeRange is not valid.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>LastCalcTimeInvalid</Name>
+      <Value>5</Value>
+      <Description>The LastCalculationTime parameter is not a Pi Point, or the PI Point is not available.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>LogNameInvalid</Name>
+      <Value>3</Value>
+      <Description>The LogName is not a valid file name.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>NetworkError</Name>
+      <Value>16</Value>
+      <Description>Network error while reading inputs</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>NoData</Name>
+      <Value>248</Value>
+      <Description>Data-retrieval functions use this state for time periods where no archive values for a tag can exist 10 minutes into the future or before the oldest mounted archive.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>NoLabData</Name>
+      <Value>216</Value>
+      <Description>No Lab Data.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>NoResult</Name>
+      <Value>212</Value>
+      <Description>No Result.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>OutputConfigInvalid</Name>
+      <Value>8</Value>
+      <Description>An output does not specify a valid or reachable PI Point.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>OverRange</Name>
+      <Value>252</Value>
+      <Description>Indicates a value that is greater than the top of range (Zero+Span) for that tag.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>QueueTimeout</Name>
+      <Value>10</Value>
+      <Description>The Calculation remained in the queue for too long.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>RetiredCalculationDependency</Name>
+      <Value>13</Value>
+      <Description>The Calculation is dependent on a retired Calculation.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>ServerOffline</Name>
+      <Value>9</Value>
+      <Description>The CalculationServer cannot be reached.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>UnderRange</Name>
+      <Value>251</Value>
+      <Description>Indicates a value that is less than the zero for the tag.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>UnhandledException</Name>
+      <Value>11</Value>
+      <Description>The calculation failed and did not handle the error internally.</Description>
+    </AFEnumerationValue>
+  </AFEnumerationSet>
+  <AFEnumerationSet>
+    <Name>CCECalculationState</Name>
+    <Description />
+    <AFEnumerationValue>
+      <Name>ConfigurationError</Name>
+      <Value>128</Value>
+      <Description>Calculation is in a configuration error state. Calculation configuration must be reviewed and fixed before the Calculation will run. See Calculation's Last Error for more information.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Disabled</Name>
+      <Value>0</Value>
+      <Description>Calculation is temporarily disabled, to allow for fixes before re-enabling.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>FetchingData</Name>
+      <Value>3</Value>
+      <Description>Calculation input data is being retrieved.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Idle</Name>
+      <Value>2</Value>
+      <Description>Calculation has been assigned to a Coordinator and is not yet running.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>NotAssigned</Name>
+      <Value>1</Value>
+      <Description>Calculation has not been assisgned to a Coordinator by a Configurator yet.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Queued</Name>
+      <Value>4</Value>
+      <Description>Calculation is waiting to execute, either for a data change, or time.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Retired</Name>
+      <Value>7</Value>
+      <Description>Calculation has been retired and should no longer be executed by a Coordinator.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Running</Name>
+      <Value>5</Value>
+      <Description>Calculation function is currently executing.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>SystemDisabled</Name>
+      <Value>64</Value>
+      <Description>Calculation has errored for 2 or more consecutive times, and has been set to disabled by the system.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>WritingOutputs</Name>
+      <Value>6</Value>
+      <Description>Calculation output is being written to the archive.</Description>
+    </AFEnumerationValue>
+  </AFEnumerationSet>
+  <AFEnumerationSet>
+    <Name>CCECalculationExecutionMode</Name>
+    <Description />
+    <AFEnumerationValue>
+      <Name>Event</Name>
+      <Value>2</Value>
+      <Description>Runs in response to CCETrigger input data changes</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Manual</Name>
+      <Value>3</Value>
+      <Description>Runs only when user sets BackfillState to Requested</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Periodic</Name>
+      <Value>1</Value>
+      <Description>Runs at an ExecutionFrequency</Description>
+    </AFEnumerationValue>
+  </AFEnumerationSet>
+  <AFEnumerationSet>
+    <Name>CCELogLevel</Name>
+    <Description>Log level and below principle is used.</Description>
+    <AFEnumerationValue>
+      <Name>All</Name>
+      <Value>255</Value>
+      <Description>All messages</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Debug</Name>
+      <Value>4</Value>
+      <Description>Debug messages and all below.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Error</Name>
+      <Value>1</Value>
+      <Description>Error; code is likely to have failed.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Info</Name>
+      <Value>3</Value>
+      <Description>Informative messages</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>None</Name>
+      <Value>0</Value>
+      <Description>Log no messages</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Trace</Name>
+      <Value>5</Value>
+      <Description>Trace messages. Significant detail.</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>Warning</Name>
+      <Value>2</Value>
+      <Description>Warnings; code will continue</Description>
+    </AFEnumerationValue>
+  </AFEnumerationSet>
+  <AFEnumerationSet>
+    <Name>CCEWriteNanAs</Name>
+    <Description />
+    <AFEnumerationValue>
+      <Name>CalcFailed</Name>
+      <Value>249</Value>
+      <Description>Calc Failed system state</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>NaN</Name>
+      <Value>2</Value>
+      <Description>Value kept as a NaN</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>NoOutput</Name>
+      <Value>1</Value>
+      <Description>Output not written for that timestamp</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>NoResult</Name>
+      <Value>212</Value>
+      <Description>No Result system state</Description>
+    </AFEnumerationValue>
+    <AFEnumerationValue>
+      <Name>SetToBad</Name>
+      <Value>247</Value>
+      <Description>Set To Bad system state</Description>
+    </AFEnumerationValue>
+  </AFEnumerationSet>
+  <AFElementTemplate>
+    <Name>CCECalculation</Name>
+    <Description>Base CCE Calculation Template. </Description>
+    <BaseTemplateOnly>true</BaseTemplateOnly>
+    <BaseTemplate />
+    <Type>None</Type>
+    <InstanceType>Element</InstanceType>
+    <AllowElementToExtend>true</AllowElementToExtend>
+    <DefaultAttribute />
+    <NamingPattern />
+    <DefaultInputPort />
+    <DefaultOutputPort />
+    <DefaultUndirectedPort />
+    <AFElementCategoryRef>CCE</AFElementCategoryRef>
+    <AFAttributeTemplate>
+      <Name>BackfillingParameters</Name>
+      <Description>Parameters controlling backfilling</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>String</Type>
+      <TypeQualifier />
+      <Value type="String"></Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>BackfillEndTime</Name>
+        <Description>Time until data should be available if backfilling has been requested</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>DateTime</Type>
+        <TypeQualifier />
+        <Value type="DateTime">2021-05-31T22:00:00Z</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>BackfillLastError</Name>
+        <Description>LastError returned from backfilling run</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>AFEnumerationValue</Type>
+        <TypeQualifier type="AFObject">EnumerationSets[CCECalculationError]</TypeQualifier>
+        <Value />
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>BackfillOverwrite</Name>
+        <Description>If enabled, existing data from the calculation will be replaced, if disabled, data will be filled around existing data.</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>AFEnumerationValue</Type>
+        <TypeQualifier type="AFObject">EnumerationSets[CCEBackfillOverwrite]</TypeQualifier>
+        <Value type="AFEnumerationValue">EnumerationSets[CCEBackfillOverwrite]\None</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>BackfillProgress</Name>
+        <Description>Indication of Backfill Progression during Backfill run</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>BackfillStartTime</Name>
+        <Description>Time from which data should be available if backfilling has been requested</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>DateTime</Type>
+        <TypeQualifier />
+        <Value type="DateTime">2021-05-31T22:00:00Z</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>BackfillState</Name>
+        <Description>Shows the state of the backfilling in CCE</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>AFEnumerationValue</Type>
+        <TypeQualifier type="AFObject">EnumerationSets[CCECalculationBackfillState]</TypeQualifier>
+        <Value type="AFEnumerationValue">EnumerationSets[CCECalculationBackfillState]\Off</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>MissedRunsThreshold</Name>
+        <Description>Number of missed runs before lag is detected</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Int32</Type>
+        <TypeQualifier />
+        <Value type="Int32">3</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>SkipBackfill</Name>
+        <Description>If enabled auto backfill is disabled for highly lagging calcs</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Boolean</Type>
+        <TypeQualifier />
+        <Value type="Boolean">False</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>CalculationName</Name>
+      <Description>The name of the calculation function to execute - defined by the calculation template using string builder.</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>String</Type>
+      <TypeQualifier />
+      <Value type="String"></Value>
+      <DataReference>String Builder</DataReference>
+      <ConfigString>%Template%&#xD;
+</ConfigString>
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>CalculationServer</Name>
+      <Description>String of the server the calculation will execute on</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>String</Type>
+      <TypeQualifier />
+      <Value type="String">localhost:9910</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>CalculationState</Name>
+      <Description>Shows the state of the calculation in CCE. </Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>AFEnumerationValue</Type>
+      <TypeQualifier type="AFObject">EnumerationSets[CCECalculationState]</TypeQualifier>
+      <Value type="AFEnumerationValue">EnumerationSets[CCECalculationState]\NotAssigned</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%Server%\%Database%.%ElementId%.%Attribute%;ReadOnly=False;pointtype=Digital;digitalset=CCECalculationState</ConfigString>
+      <AFAttributeCategoryRef>CCEInternalConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ComponentName</Name>
+      <Description>The archive name the coordinator will use to call the function in the prod server. </Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>String</Type>
+      <TypeQualifier />
+      <Value type="String"></Value>
+      <DataReference>String Builder</DataReference>
+      <ConfigString>"%Template%";</ConfigString>
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>CoordinatorID</Name>
+      <Description>Identifier of the Coordinator running this calculation</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Int32</Type>
+      <TypeQualifier />
+      <Value type="Int32">0</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEInternalConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>ExecutionParameters</Name>
+      <Description>Parameters controlling calculation execution</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>String</Type>
+      <TypeQualifier />
+      <Value type="String"></Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>ExecutionFrequency</Name>
+        <Description>Period of execution for Periodic Coordinator; NaN for Event-based, Single or Manual ExecutionMode</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM>s</DefaultUOM>
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">NaN</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>ExecutionIndex</Name>
+        <Description>Index for dependent calculations.</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Int32</Type>
+        <TypeQualifier />
+        <Value type="Int32">1</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>ExecutionMode</Name>
+        <Description>Enumeration representing current calculation status</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>AFEnumerationValue</Type>
+        <TypeQualifier type="AFObject">EnumerationSets[CCECalculationExecutionMode]</TypeQualifier>
+        <Value type="AFEnumerationValue">EnumerationSets[CCECalculationExecutionMode]\Periodic</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>ExecutionOffset</Name>
+        <Description>Time for the first calculation result after midnight.</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM>s</DefaultUOM>
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>Double</Type>
+        <TypeQualifier />
+        <Value type="Double">0</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>LastCalculationTime</Name>
+      <Description>Datetime of when the calculation was last run successfully</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>DateTime</Type>
+      <TypeQualifier />
+      <Value type="DateTime">2021-05-31T22:00:00Z</Value>
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%Server%\%Database%.%ElementId%.%Attribute%;ReadOnly=False;pointtype=Timestamp</ConfigString>
+      <AFAttributeCategoryRef>CCEInternalConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>LastError</Name>
+      <Description>Last Error returned from the calculation</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>AFEnumerationValue</Type>
+      <TypeQualifier type="AFObject">EnumerationSets[CCECalculationError]</TypeQualifier>
+      <Value />
+      <DataReference>PI Point</DataReference>
+      <ConfigString>\\%Server%\%Database%.%ElementId%.%Attribute%;ReadOnly=False;pointtype=Digital;digitalset=CCECalculationError</ConfigString>
+      <AFAttributeCategoryRef>CCEInternalConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>LogParameters</Name>
+      <Description>Parameters controlling logging</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>String</Type>
+      <TypeQualifier />
+      <Value type="String"></Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+      <AFAttributeTemplate>
+        <Name>CalculationID</Name>
+        <Description>Unique identifier used for calculation logging.</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String"></Value>
+        <DataReference>String Builder</DataReference>
+        <ConfigString>"%ElementID%";</ConfigString>
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>LogLevel</Name>
+        <Description>Enumeration list in order: debug, info, warning, error - will log to selected level and above.</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>AFEnumerationValue</Type>
+        <TypeQualifier type="AFObject">EnumerationSets[CCELogLevel]</TypeQualifier>
+        <Value type="AFEnumerationValue">EnumerationSets[CCELogLevel]\Warning</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+      <AFAttributeTemplate>
+        <Name>LogName</Name>
+        <Description>Name of logfile.</Description>
+        <IsHidden>false</IsHidden>
+        <IsManualDataEntry>false</IsManualDataEntry>
+        <IsConfigurationItem>false</IsConfigurationItem>
+        <IsExcluded>false</IsExcluded>
+        <IsIndexed>false</IsIndexed>
+        <Trait />
+        <DefaultUOM />
+        <DisplayDigits>-5</DisplayDigits>
+        <Type>String</Type>
+        <TypeQualifier />
+        <Value type="String">calculation.log</Value>
+        <DataReference />
+        <ConfigString />
+      </AFAttributeTemplate>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>RequestToDisable</Name>
+      <Description>Request that the Coordinator disable this calculation ASAP</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>Boolean</Type>
+      <TypeQualifier />
+      <Value type="Boolean">False</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAttributeTemplate>
+      <Name>WriteNanAs</Name>
+      <Description>What should NaN values be written as</Description>
+      <IsHidden>false</IsHidden>
+      <IsManualDataEntry>false</IsManualDataEntry>
+      <IsConfigurationItem>false</IsConfigurationItem>
+      <IsExcluded>false</IsExcluded>
+      <IsIndexed>false</IsIndexed>
+      <Trait />
+      <DefaultUOM />
+      <DisplayDigits>-5</DisplayDigits>
+      <Type>AFEnumerationValue</Type>
+      <TypeQualifier type="AFObject">EnumerationSets[CCEWriteNanAs]</TypeQualifier>
+      <Value type="AFEnumerationValue">EnumerationSets[CCEWriteNanAs]\NaN</Value>
+      <DataReference />
+      <ConfigString />
+      <AFAttributeCategoryRef>CCEConfig</AFAttributeCategoryRef>
+    </AFAttributeTemplate>
+    <AFAnalysisTemplate>
+      <Name>CCECalculationDisabledBySystem</Name>
+      <Description>Event frame capturing System Disabling for CCE Calculations</Description>
+      <OutputTime />
+      <GroupID>0</GroupID>
+      <CaseTemplate />
+      <Target>CCECalculation</Target>
+      <CreateEnabled>true</CreateEnabled>
+      <AFAnalysisRule>
+        <AFPlugIn>EventFrame</AFPlugIn>
+        <ConfigString>EFTGUID=3c92f5f7-f6ba-43bc-8029-b758b15c296b;EFTNAME=CCESystemDisabled</ConfigString>
+        <VariableMapping />
+        <AFAnalysisRule>
+          <AFPlugIn>PerformanceEquation</AFPlugIn>
+          <ConfigString>@group("Start triggers") @name("CalculationSystemDisabled")&#xD;&#xD;&#xD;
+StartTrigger1 := '{0d3b1a50-3a13-45c2-a0c6-4792a748fe07};CalculationState' = "SystemDisabled";&#xD;&#xD;&#xD;
+&#xD;&#xD;&#xD;
+@group("End triggers")&#xD;&#xD;&#xD;
+EndTrigger := '{0d3b1a50-3a13-45c2-a0c6-4792a748fe07};CalculationState' &lt;&gt; "SystemDisabled";</ConfigString>
+          <VariableMapping />
+        </AFAnalysisRule>
+      </AFAnalysisRule>
+      <AFTimeRule>
+        <AFPlugIn>Natural</AFPlugIn>
+        <ConfigString />
+      </AFTimeRule>
+    </AFAnalysisTemplate>
+  </AFElementTemplate>
+</AF>

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MSTest.TestAdapter" Version="3.1.5" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.1.5" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cceLetheTheoreticalRecovery\cceLetheTheoreticalRecovery\CCELetheTheoreticalRecovery.csproj" />
+  </ItemGroup>
+</Project>

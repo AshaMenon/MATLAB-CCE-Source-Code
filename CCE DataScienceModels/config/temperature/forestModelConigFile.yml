@@ -1,0 +1,51 @@
+# Read and format data properties
+
+highFreqPredictors : ["Matte feed PV", "Fuel coal feed rate PV", "Specific Oxygen Actual PV",
+                      "Lump coal PV", "Lance oxygen flow rate PV", "Lance air flow rate PV",
+                      "Matte transfer air flow", "Lance coal carrier air", "Silica PV",
+                      "Lower waffle 19", "Lower waffle 20", "Lower waffle 21",
+                      "Lower waffle 22", "Lower waffle 23", "Lower waffle 24",
+                      "Lower waffle 25", "Lower waffle 26", "Lower waffle 27",
+                      "Lower waffle 28", "Lower waffle 29", "Lower waffle 30",
+                      "Lower waffle 31", "Lower waffle 32", "Lower waffle 33",
+                      "Lower waffle 34", "Upper hearth 90", "Upper hearth 91",
+                      "Upper hearth 92", "Upper hearth 93", "Upper hearth 94",
+                      "Upper hearth 95", "Upper hearth 96", "Upper hearth 97",
+                      "Upper hearth 98", "Fuel coal feed rate SP", "Lance height",
+                      "Lance motion"]
+
+lowFreqPredictors : ["Corrected Ni Slag", "Ni Slag", "S Slag", "Cr2O3 Slag", "Basicity",
+                     "Cu Feedblend", "Ni Feedblend", "Co Feedblend", "Fe Feedblend",
+                     "S Feedblend", "SiO2 Feedblend", "Al2O3 Feedblend", "CaO Feedblend",
+                     "MgO Feedblend", "Cr2O3 Feedblend", "MgO Slag",
+                     "Slag temperatures"]
+
+responseTags : ['Matte temperatures'] #Do we need to actually specify here?
+
+subModel : 'Temperature'
+
+# Preprocessing data properties
+
+addRollingSumPredictors : {'add': True, 'window': 30}
+
+#addRollingMeanPredictors: {'add': True, 'window': 5, 'on': highFreqPredictors}
+
+addMeasureIndicatorsAsPredictors: {'add': True, 'on': ["Matte temperatures"]}
+
+addShiftsToPredictors: {'add': False, 'numberOfShifts': 2}
+
+addResponsesAsPredictors: True
+
+resampleTime : '30min'
+
+resampleMethod : 'linear'
+
+# split into test and train
+
+trainingFraction : 0.85
+
+maxTrainSize : 47
+
+testSize : 7
+
+

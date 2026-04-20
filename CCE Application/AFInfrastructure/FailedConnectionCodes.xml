@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.10.9.593" ExportMode="NoUniqueID" PISystem="ons-opcdev" Database="WACP" Description="" Created="2024-03-05T08:00:43.506202Z" id="8b3fb85b-652c-4906-a3d3-99ab7fd6e086" ParentKey="5c239f8e-8f19-4b2a-b903-f08254919f62" ExportedObject="FailedConnectionCodes" ExportedType="AFTable" Identity="Table" PIPersist="176 {9895150E-085D-4fcb-A16D-5EF5D2527196} 2\{979c1ef3-25dd-4b05-a0c9-b0461d3fb5ab}\Tables[{8b3fb85b-652c-4906-a3d3-99ab7fd6e086}]*ons-opcdev\WACP\Tables[FailedConnectionCodes]">
+  <AFTable>
+    <Name>FailedConnectionCodes</Name>
+    <Description>Contains failed connection error codes that CCE checks against</Description>
+    <ExternalPersist>false</ExternalPersist>
+    <Schema>
+<xs:schema id="FailedConnectionCodesDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="FailedConnectionCodesDataSet" msdata:IsDataSet="true" msdata:Locale="">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FailedConnectionCodes" msdata:Locale="">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Code" type="xs:double" default="0" minOccurs="0" />
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema></Schema>
+    <DataTable><FailedConnectionCodesDataSet><FailedConnectionCodes><Code>-2146893041</Code><Description>Unknown - has been found to often occur on Anglo CCE</Description></FailedConnectionCodes><FailedConnectionCodes><Code>-10723</Code><Description>No connection</Description></FailedConnectionCodes><FailedConnectionCodes><Code>10734</Code><Description>Unable to open session on server - broken connection</Description></FailedConnectionCodes><FailedConnectionCodes><Code>10733</Code><Description>PI server unavailable</Description></FailedConnectionCodes><FailedConnectionCodes><Code>10758</Code><Description>Failed to create remote connection</Description></FailedConnectionCodes><FailedConnectionCodes><Code>-10722</Code><Description>Timeout on PI RPC or System Call</Description></FailedConnectionCodes></FailedConnectionCodesDataSet></DataTable>
+  </AFTable>
+</AF>

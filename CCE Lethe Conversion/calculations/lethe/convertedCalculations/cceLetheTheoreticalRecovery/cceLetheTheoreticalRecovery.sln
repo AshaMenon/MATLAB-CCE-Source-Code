@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCELetheTheoreticalRecovery", "cceLetheTheoreticalRecovery\CCELetheTheoreticalRecovery.csproj", "{77D82965-E2EF-5089-89D0-5E23D7FCAED1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77D82965-E2EF-5089-89D0-5E23D7FCAED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D82965-E2EF-5089-89D0-5E23D7FCAED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D82965-E2EF-5089-89D0-5E23D7FCAED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D82965-E2EF-5089-89D0-5E23D7FCAED1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC9494C7-CC7A-4922-BCEC-474C50A3577A}
+	EndGlobalSection
+EndGlobal

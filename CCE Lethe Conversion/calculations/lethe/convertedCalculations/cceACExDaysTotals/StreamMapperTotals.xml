@@ -1,0 +1,847 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+StreamMapperTotals
+</name>
+</assembly>
+<members>
+<member name="M:StreamMapperTotals.CommonFunctions.GetValueAtTime_old(OSIsoft.PI.ACE.PIACEPoint,PITimeServer.PITime,System.Double,System.Double)">
+ <summary>
+ Gets the first PI event of a Tag near the specified time or returns nothing.
+ Searches back from the specified time first, and if nothing is found searches forward.
+ Note: Code has got stuck in a loop before - but was not resolved
+ </summary>
+ <param name="ACETag">
+ The PIAcePoint of interest.
+ </param>
+ <param name="GetTime">
+ The time to retrieve the value from as PITime - use PIACEBIFunctions.ParseTime(...,...) to convert from date time to PITime
+ </param>
+ <param name="Tol">
+ Time match (negative) tolerance in seconds as double. ie. will return an event within (+)-0.5 seconds of the GetTime
+ If pTol is specified the returned event will have a time stamp within GetTime - Tol and GetTime + pTol
+ </param>
+ <param name="pTol">
+ Time match positive tolerance in seconds as double. ie. returned event will have a time stamp within GetTime - Tol and GetTime + pTol
+ </param>
+ <returns>
+ PIACE event with value  and time, or nothing is the data is bad or does not exist
+ </returns>
+ <remarks>
+ updated 2009-06-24 08:44
+ Note: Code has got stuck in a loop before - but was not resolved (loop break after 100 iterations has been implemented)
+ </remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.GenerateFiveAMYesterdayDates(System.Object)">
+ <summary>
+ Generates two dates, the first of which is 05:01am of at least 24 hours prior, the second of which is 05:00am the next day.
+ </summary>
+ <param name="ExeTime">
+ 
+ </param>
+ <returns>
+ A Date time Array, index 0 = time at start of period; index 1 = time at end of period 
+ </returns>
+ <remarks>
+ An older function that only works for 1 day periods from 05:00:01 to 05:00:00 - use "GetTotalizedPeriod" for a more options
+ updated 2009-03-31 10:30
+ </remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.SendViaPISDK(System.String,System.String,System.Object,System.DateTime)">
+ <summary>
+ This method saves the value of the tag at the given time using the PI SDK (as opposed to the standard ACE method).
+ This is useful for saving the value at an exact time, with no drift; or writing multiple values into PI.
+ </summary>
+ <param name="tagname">
+ The tag name as a string.
+ </param>
+ <param name="tagval">
+ The tag's value.
+ </param>
+ <param name="time">
+ The time at which this value occured.
+ </param>
+ <remarks>
+ The PI ACE calculation context needs to run off the modular database, and there needes to be 1 alias in the root node of the context for this method to work.
+ The PI server for PIAlias.Item(1) is used for all output tags - this will result in errors if tags from multiple servers are present
+ updated 2009-03-31 10:30
+ updated 2011-11-30 got servername from context path finds tag directly from this
+ </remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.SendViaPISDK(PISDK.PIAlias,System.Object,System.DateTime,System.Boolean,System.Boolean,System.DateTime,System.Double,System.Double)">
+ <summary>
+ Writes out a value to PI, with option to test (no writeout), check value against the tags zero and span, write to a second date 
+ </summary>
+ <param name="TagAlias">PI ACE Alias to write to</param>
+ <param name="tagval">Value to write out</param>
+ <param name="FirstDate">Date Time to write to</param>
+ <param name="TestWriteOut">true = running a test and no value is writen; false = write a value out</param>
+ <param name="CheckToZeroSpan">true = check the input Value to see if it is with the zero and span range
+ If less than TagZero then "Under Range" is writen out
+ If greater than TagZero + TagSpan then "Over Range" is writen out
+ </param>
+ <param name="SecondDate"> optinal second date to write the input value to</param>
+ <param name="Zero">specify a zero to overide the TagZero or when TagZero is known PIACEPoint.Zero</param>
+ <param name="Span">specify a span to overide the TagSpan or when TagSpan is known PIACEPoint.Span</param>
+ <remarks></remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.SendViaPISDK(PISDK.PIPoint,System.Object,System.DateTime,System.Boolean,System.Boolean,System.DateTime,System.Double,System.Double)">
+ <summary>
+ Writes out a value to PI, with option to test (no writeout), check value against the tags zero and span, write to a second date 
+ </summary>
+ <param name="OutPoint">PI Point to write to</param>
+ <param name="tagval">Value to write out</param>
+ <param name="FirstDate">Date Time to write to</param>
+ <param name="TestWriteOut">true = running a test and no value is writen; false = write a value out</param>
+ <param name="CheckToZeroSpan">true = check the input Value to see if it is with the zero and span range
+ If less than TagZero then "Under Range" is writen out
+ If greater than TagZero + TagSpan then "Over Range" is writen out
+ </param>
+ <param name="SecondDate"> optinal second date to write the input value to</param>
+ <param name="Zero">specify a zero to overide the TagZero or when TagZero is known PIACEPoint.Zero</param>
+ <param name="Span">specify a span to overide the TagSpan or when TagSpan is known PIACEPoint.Span</param>
+ <remarks></remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.SendViaPISDK(OSIsoft.PI.ACE.PIACEPoint,System.Object,System.DateTime,System.Boolean,System.Boolean,System.DateTime,System.Double,System.Double)">
+ <summary>
+ Writes out a value to PI, with option to test (no writeout), check value against the tags zero and span, write to a second date 
+ </summary>
+ <param name="OutACEPoint">PI ACE Point to write to</param>
+ <param name="tagval">Value to write out</param>
+ <param name="FirstDate">Date Time to write to</param>
+ <param name="TestWriteOut">true = running a test and no value is writen; false = write a value out</param>
+ <param name="CheckToZeroSpan">true = check the input Value to see if it is with the zero and span range
+ If less than TagZero then "Under Range" is writen out
+ If greater than TagZero + TagSpan then "Over Range" is writen out
+ </param>
+ <param name="SecondDate"> optinal second date to write the input value to</param>
+ <param name="Zero">specify a zero to overide the TagZero or when TagZero is known PIACEPoint.Zero</param>
+ <param name="Span">specify a span to overide the TagSpan or when TagSpan is known PIACEPoint.Span</param>
+ <remarks></remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.SendViaPISDK(System.String,System.Object,System.DateTime,System.Boolean,System.Boolean,System.DateTime,System.Double,System.Double)">
+ <summary>
+ Writes out a value to PI, with option to test (no writeout), check value against the tags zero and span, write to a second date 
+ </summary>
+ <param name="FullTagName">full PITag name to write to  //server/Tag</param>
+ <param name="tagval">Value to write out</param>
+ <param name="FirstDate">Date Time to write to</param>
+ <param name="TestWriteOut">true = running a test and no value is writen; false = write a value out</param>
+ <param name="CheckToZeroSpan">true = check the input Value to see if it is with the zero and span range
+ If less than TagZero then "Under Range" is writen out
+ If greater than TagZero + TagSpan then "Over Range" is writen out
+ </param>
+ <param name="SecondDate"> optinal second date to write the input value to</param>
+ <param name="Zero">specify a zero to overide the TagZero or when TagZero is known PIACEPoint.Zero</param>
+ <param name="Span">specify a span to overide the TagSpan or when TagSpan is known PIACEPoint.Span</param>
+ <remarks></remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.writePISDK(PISDK.PIPoint,System.Object,System.DateTime,System.Boolean)">
+ <summary>
+ This method saves the value of the tag at the given time using the PI SDK 
+ It uses a PIPoint passed into the function and is more efficient than SendViaPISDK
+ </summary>
+ <param name="PITag">
+ The tag name as a string. = PIAlias.DataSource
+ </param>
+ <param name="tagval">
+ The tag's value.
+ </param>
+ <param name="time">
+ The time at which this value occurred.
+ </param>
+ <param name="Testing">
+ False = Value written  to PI, True = no value written to PI
+ </param>
+ <remarks>
+ This method should be used as the preferred write out as it is more efficient that SendViaPISDK (which has to first search for the tag using a string input)
+ Writes out when the PI SDK tag is know, the SDK tag is available from the PIAlias.DataSource property
+ writePISDK(PIAlias.DataSource, 23, 2010-08-17 06:00:01)
+ updated 2010-08-17 
+  </remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.UpdateViaPISDDKWithCheck(PISDK.PIPoint,System.Object,System.DateTime,System.Boolean,System.Boolean,System.DateTime,System.Double,System.Double)">
+ <summary>
+ Writes out a value to PI, with option to test (no writeout), check value against the tags zero and span, write to a second date 
+ </summary>
+ <param name="PiTag">PIpoint to write to</param>
+ <param name="Value">Value to write out</param>
+ <param name="FirstDate">Date Time to write to</param>
+ <param name="TestWriteOut">true = running a test and no value is writen; false = write a value out</param>
+ <param name="CheckToZeroSpan">true = check the input Value to see if it is with the zero and span range
+ If less than TagZero then "Under Range" is writen out
+ If greater than TagZero + TagSpan then "Over Range" is writen out
+ </param>
+ <param name="SecondDate"> optinal second date to write the input value to</param>
+ <param name="Zero">specify a zero to overide the TagZero or when TagZero is known PIACEPoint.Zero</param>
+ <param name="Span">specify a span to overide the TagSpan or when TagSpan is known PIACEPoint.Span</param>
+ <remarks></remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.RemoveViaPISDK(OSIsoft.PI.ACE.PIACEPoint,System.DateTime,System.Boolean,System.Boolean,System.DateTime,System.Boolean)">
+ <summary>
+ Removes a value from PI, either the first value whith multivalue times or all values
+ </summary>
+ <param name="OutACEPoint">AcePoint to Remove value from</param>
+ <param name="FirstDate">Date to remove value</param>
+ <param name="TestRemove">true = running a test and no value is writen; false = write a value out</param>
+ <param name="RemoveAllorFirst">true = removes all values at the time
+ True = remove all values
+ False = remove first value
+ </param>
+ <param name="SecondDate"> optinal second date to remove value from</param>
+ <param name="RemoveRange">optional  remove a range of values first date to second date</param> 
+ <remarks></remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.RemoveViaPISDK(PISDK.PIAlias,System.DateTime,System.Boolean,System.Boolean,System.DateTime,System.Boolean)">
+ <summary>
+ Removes a value from PI, either the first value whith multivalue times or all values
+ </summary>
+ <param name="TagAlias">PIAlias to Remove value from</param>
+ <param name="FirstDate">Date to remove value</param>
+ <param name="TestRemove">true = running a test and no value is writen; false = write a value out</param>
+ <param name="RemoveAllorFirst">true = removes all values at the time
+ True = remove all values
+ False = remove first value
+ </param>
+ <param name="SecondDate"> optinal second date to remove value from</param>
+ <param name="RemoveRange">optional  remove a range of values first date to second date</param> 
+ <remarks></remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.RemoveViaPISDDKWithCheck(PISDK.PIPoint,System.DateTime,System.Boolean,System.Boolean,System.DateTime,System.Boolean)">
+ <summary>
+ Removes a value from PI, either the first value whith multivalue times or all values
+ </summary>
+ <param name="PiTag">PIpoint to Remove valuye from</param>
+ <param name="FirstDate">Date to remove value</param>
+ <param name="TestRemove">true = running a test and no value is writen; false = write a value out</param>
+ <param name="RemoveAllorFirst">true = removes all values at the time
+ True = remove all values
+ False = remove first value
+ </param>
+ <param name="SecondDate"> optinal second date to remove value from</param>
+ <param name="RemoveRange">optional  remove a range of values first date to second date</param> 
+ <remarks></remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.GetTotalizedPeriod(OSIsoft.PI.ACE.PIACEPoint@,System.DateTime,System.DateTime)">
+ <summary>
+ A method to calculate the event-weighted total of all numeric samples within the given period.
+ </summary>
+ <param name="tag">
+ The tag which will be totalized.
+ </param>
+ <param name="first_date">
+ The start time
+ </param>
+ <param name="second_date">
+ The end time.
+ </param>
+ <returns>
+ Nothing if no data
+ </returns>
+ <remarks>
+ Sep 20 2012 was converting to string before adding. so values where concatenating and not adding.
+ Sep 28 2012 was adding to double.NaN.
+ </remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.GetTotValue(OSIsoft.PI.ACE.PIACEPoint,PITimeServer.PITime)">
+ <summary>
+ Get a the last finalised-Totaliser-value before the given time using the tag attributes
+ If time is 06:32 and the totaliser ends at 06:00:00 - return value at 06:00:00
+ </summary>
+ <param name="TotTag">
+ The PIAcePoints of interest.
+ </param>
+ <returns>
+ PI event of the value and time stamp
+ </returns>
+ <remarks>
+ updated 2009-03-31 10:30
+ NOTE from Elmer Botha 2009-07-13:
+ This function must no longer be used as it only works for a totaliser tag.
+ Rather use GetACE2TotValue as it accommodates all types of tags. 
+ </remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.old_GetACE2TotValue(OSIsoft.PI.ACE.PIACEPoint,PITimeServer.PITime,System.Int64,System.Double)">
+ <summary>
+ Gets the last value of a 2 point totaliser output, before or at the current execution time
+ If time is 06:32 and the totaliser ends at 06:00:00 - return value at 06:00:00, OR if time is 06:00:00 and the totaliser ends at 06:00:00 - return value at 06:00:00
+ </summary>
+ <param name="ACETag">
+ The PIAcePoint of interest.
+ </param>
+ <param name="ExecTime">
+ The Execution time as PITime.
+ </param>
+ <param name="ACE2TotPeriod">
+ The period (in seconds as long) of the 2 point totlaiser been looked at - used for validation
+ </param>
+ <param name="Tol">
+ 2 point value match tolerance percent Abs((value1-value2)/Ave) less than or equal to Tol/100
+ </param>
+ <returns>
+ PI ace event with value  and time, or nothing if the data is bad or does not exist
+ </returns>
+ <remarks>
+ Warren: Was taken out of service on 2011-12-01
+ Note 2011-08-02 - Warren: should change this to use GetValueAtTime and feed in the start or end time of the Total
+ updated 2009-10-27 - reduced the time span to look  back, the the last totalisation period was bad the previous period was returned when it should not have been
+ Note from Elmer Botha 2009-07-13: Use this function rather than GetTotValue. GetTotalValue only accomodates totaliser tags
+ </remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.old_20190515_GetACE2TotValue(OSIsoft.PI.ACE.PIACEPoint,PITimeServer.PITime,System.Int64,System.Double)">
+ <summary>
+ Update 2019-05-15: retired calc as some totalisers and ACE/AF calculations now only output one value at the start of the period and not 2 values.
+ 
+ Gets the last finalised value of a 2 point totaliser period, before or at the current execution time
+ If a last finalised value does not exist in the last period, then nothing is returned
+ If time is 06:32 and the totaliser ends at 06:00:00 - return value at 06:00:00, OR if time is 06:00:00 and the totaliser ends at 06:00:00 - return value at 06:00:00
+ </summary>
+ <param name="ACETag">
+ The PIAcePoint of interest.
+ </param>
+ <param name="ExecTime">
+ The Execution time as PITime.
+ </param>
+ <param name="ACE2TotPeriod">
+ The period (in seconds as long) of the 2 point totlaiser been looked at - used for validation
+ </param>
+ <param name="Tol">
+ 2 point value match tolerance percent Abs((value1-value2)/Ave) less than or equal to Tol/100
+ </param>
+ <returns>
+ PI ace event with value  and time, or nothing if the data is bad or does not exist (no finalised value in the last period)
+ </returns>
+ <remarks>
+ Note 2011-12-01 Warren created
+ </remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.GetLastGood_Num(OSIsoft.PI.ACE.PIACEPoint,PITimeServer.PITime)">
+ <summary>
+ Recurses back to get the last good (Neumeric) data event in the database
+ </summary>
+ <param name="Tag">
+ The PIAcePoint of interest - needs to be an floating point or integer.
+ </param>
+ <param name="CurTime">
+ The Execution time as PITime.
+ </param>
+ <returns>
+ Last good event as PIACEEvent in the database = nothing if non exists
+ </returns>
+ <remarks>
+ updated 2009-11-02 10:30
+ re-writen 2013-05-03 more effiecent method
+ </remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.GetLastGood(OSIsoft.PI.ACE.PIACEPoint,PITimeServer.PITime)">
+ <summary>
+ Recurses back to get the last good data event in the historian
+ </summary>
+ <param name="Tag">
+ The PIAcePoint of interest.
+ </param>
+ <param name="CurTime">
+ The Execution time as PITime.
+ </param>
+ <returns>
+ Last good event as PIACEEvent in the database = nothing if non exists
+ </returns>
+ <remarks>
+ updated 2010-06-17 15:24
+ re-writen 2013-05-03 Isgood(time) function was failing, chnaged to use pisdk to get compressed datab with a filter
+ </remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.GetNextGood_Num(OSIsoft.PI.ACE.PIACEPoint,PITimeServer.PITime)">
+ <remarks>
+ <summary>
+ Recurses forward to get the first good (Neumeric) data event in the database
+ </summary>
+ <param name="Tag">
+ The PIAcePoint of interest.
+ </param>
+ <param name="CurTime">
+ The Execution time as PITime.
+ </param>
+ <returns>
+ Next good PIACEEvent in the database = nothing if non exists
+ </returns>
+ updated 2009-03-31 10:30
+ re-writen 2013-05-03 more effiecent method
+ </remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.GetNextGood(OSIsoft.PI.ACE.PIACEPoint,PITimeServer.PITime)">
+ <remarks>
+ <summary>
+ Recurses forward to get the first good data event in the database
+ </summary>
+ <param name="Tag">
+ The PIAcePoint of interest.
+ </param>
+ <param name="CurTime">
+ The Execution time as PITime.
+ </param>
+ <returns>
+ Next good PIACEEvent in the database = nothing if non exists
+ </returns>
+ updated 2010-06-17 15:24
+ re-writen 2013-05-03 Isgood(time) function was failing, chnaged to use pisdk to get compressed datab with a filter
+ </remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.GenerateTotPeriodDates(PITimeServer.PITime,System.Int64,System.Int64)">
+ <summary>
+ Generates two dates, the first of which is 1 second into the start of the totalisation period and the second is at the end of the totalisation period
+ eg. GenerateTotPeriodDates(24 feb 05:00:01, 86400, 18000) yields 23 feb 05:00:01 and 24 feb 05:00:00
+ eg. GenerateTotPeriodDates(24 feb 05:00:01, 3600, 0) yields 24 feb 04:00:01 and 24 feb 05:00:00
+ The dates returned are for the first totalisation period that has closed (finalised) before the given date time 
+ </summary>
+ <param name="ExecTime">
+ current/exicution time as pi time
+ </param>
+ <param name="TotPeriod">
+ The totalisation period in seconds as long = seconds between each totalisation period, 24 hrs = 86400
+ </param>
+ <param name="TotOffset">
+ The offset of the totalisation period in seconds as long, 5 am = 18000
+ </param>
+ <returns>
+ DateTime array of: index 0 = time at 1 second into the start of the period and index 1 = time at the end of the period.
+ </returns>
+ <remarks>
+ updated 2009-03-31 10:30
+ </remarks>
+</member>
+<member name="M:StreamMapperTotals.CommonFunctions.IterpolatedVal(OSIsoft.PI.ACE.PIACEPoint,PITimeServer.PITime)">
+ <summary>
+ Value interpolated at the time given, numeric values only
+ </summary>
+ <param name="Tag">
+ The PIAcePoint of interest.
+ </param>
+ <param name="CurTime">
+ The Execution time as PItime.
+ </param>
+ <returns>
+ PIACE event of the interpolated value; = nothing if non exists
+ </returns>
+ <remarks>
+ updated 2009-11-02 Is numeric check on result
+ </remarks>
+</member>
+<member name="T:StreamMapperTotals.StreamDataDomainServiceData.StreamDataDomainServiceData">
+<summary>
+There are no comments for StreamDataDomainServiceData in the schema.
+</summary>
+</member>
+<member name="M:StreamMapperTotals.StreamDataDomainServiceData.StreamDataDomainServiceData.#ctor(System.Uri)">
+<summary>
+Initialize a new StreamDataDomainServiceData object.
+</summary>
+</member>
+<member name="M:StreamMapperTotals.StreamDataDomainServiceData.StreamDataDomainServiceData.ResolveTypeFromName(System.String)">
+<summary>
+Since the namespace configured for this service reference
+in Visual Studio is different from the one indicated in the
+server schema, use type-mappers to map between the two.
+</summary>
+</member>
+<member name="M:StreamMapperTotals.StreamDataDomainServiceData.StreamDataDomainServiceData.ResolveNameFromType(System.Type)">
+<summary>
+Since the namespace configured for this service reference
+in Visual Studio is different from the one indicated in the
+server schema, use type-mappers to map between the two.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamDataDomainServiceData.WBrawDatas">
+<summary>
+There are no comments for WBrawDatas in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamDataDomainServiceData.MArawDatas">
+<summary>
+There are no comments for MArawDatas in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamDataDomainServiceData.TransactionSummaries">
+<summary>
+There are no comments for TransactionSummaries in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamDataDomainServiceData.StreamTotals">
+<summary>
+There are no comments for StreamTotals in the schema.
+</summary>
+</member>
+<member name="M:StreamMapperTotals.StreamDataDomainServiceData.StreamDataDomainServiceData.AddToWBrawDatas(StreamMapperTotals.StreamDataDomainServiceData.WBrawData)">
+<summary>
+There are no comments for WBrawDatas in the schema.
+</summary>
+</member>
+<member name="M:StreamMapperTotals.StreamDataDomainServiceData.StreamDataDomainServiceData.AddToMArawDatas(StreamMapperTotals.StreamDataDomainServiceData.MArawData)">
+<summary>
+There are no comments for MArawDatas in the schema.
+</summary>
+</member>
+<member name="M:StreamMapperTotals.StreamDataDomainServiceData.StreamDataDomainServiceData.AddToTransactionSummaries(StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary)">
+<summary>
+There are no comments for TransactionSummaries in the schema.
+</summary>
+</member>
+<member name="M:StreamMapperTotals.StreamDataDomainServiceData.StreamDataDomainServiceData.AddToStreamTotals(StreamMapperTotals.StreamDataDomainServiceData.StreamTotal)">
+<summary>
+There are no comments for StreamTotals in the schema.
+</summary>
+</member>
+<member name="T:StreamMapperTotals.StreamDataDomainServiceData.WBrawData">
+<summary>
+There are no comments for LightSwitchApplication.WBrawData in the schema.
+</summary>
+<KeyProperties>
+ID
+</KeyProperties>
+</member>
+<member name="M:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.CreateWBrawData(System.Int32,System.DateTime,System.DateTime)">
+<summary>
+Create a new WBrawData object.
+</summary>
+<param name="ID">Initial value of ID.</param>
+<param name="dateIn">Initial value of DateIn.</param>
+<param name="dateOut">Initial value of DateOut.</param>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.ID">
+<summary>
+There are no comments for Property ID in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.DateIn">
+<summary>
+There are no comments for Property DateIn in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.DateOut">
+<summary>
+There are no comments for Property DateOut in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.Nett">
+<summary>
+There are no comments for Property Nett in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.WBCode">
+<summary>
+There are no comments for Property WBCode in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.Gross">
+<summary>
+There are no comments for Property Gross in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.TruckReg">
+<summary>
+There are no comments for Property TruckReg in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.TrailerReg">
+<summary>
+There are no comments for Property TrailerReg in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.VehicleType">
+<summary>
+There are no comments for Property VehicleType in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.HaulerName">
+<summary>
+There are no comments for Property HaulerName in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.SampleID">
+<summary>
+There are no comments for Property SampleID in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.SPmoisture">
+<summary>
+There are no comments for Property SPmoisture in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.stSPmoisture">
+<summary>
+There are no comments for Property stSPmoisture in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.Batch">
+<summary>
+There are no comments for Property Batch in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.stBatch">
+<summary>
+There are no comments for Property stBatch in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.Lot">
+<summary>
+There are no comments for Property Lot in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.WBrawData.stLot">
+<summary>
+There are no comments for Property stLot in the schema.
+</summary>
+</member>
+<member name="T:StreamMapperTotals.StreamDataDomainServiceData.MArawData">
+<summary>
+There are no comments for LightSwitchApplication.MArawData in the schema.
+</summary>
+<KeyProperties>
+ID
+</KeyProperties>
+</member>
+<member name="M:StreamMapperTotals.StreamDataDomainServiceData.MArawData.CreateMArawData(System.Int32,System.Int32,System.DateTime,System.Double,System.Int32)">
+<summary>
+Create a new MArawData object.
+</summary>
+<param name="ID">Initial value of ID.</param>
+<param name="lot">Initial value of Lot.</param>
+<param name="sampleDate">Initial value of SampleDate.</param>
+<param name="value">Initial value of Value.</param>
+<param name="batch">Initial value of Batch.</param>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.MArawData.ID">
+<summary>
+There are no comments for Property ID in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.MArawData.Plantcode">
+<summary>
+There are no comments for Property Plantcode in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.MArawData.MACode">
+<summary>
+There are no comments for Property MACode in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.MArawData.Assay">
+<summary>
+There are no comments for Property Assay in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.MArawData.Timecode">
+<summary>
+There are no comments for Property Timecode in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.MArawData.Lot">
+<summary>
+There are no comments for Property Lot in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.MArawData.SampleDate">
+<summary>
+There are no comments for Property SampleDate in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.MArawData.Value">
+<summary>
+There are no comments for Property Value in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.MArawData.Batch">
+<summary>
+There are no comments for Property Batch in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.MArawData.stBatch">
+<summary>
+There are no comments for Property stBatch in the schema.
+</summary>
+</member>
+<member name="T:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary">
+<summary>
+There are no comments for LightSwitchApplication.TransactionSummary in the schema.
+</summary>
+<KeyProperties>
+ID
+</KeyProperties>
+</member>
+<member name="M:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.CreateTransactionSummary(System.Int32,System.Boolean,System.DateTime,System.Int32,System.Double,System.Double,System.Double,System.Double)">
+<summary>
+Create a new TransactionSummary object.
+</summary>
+<param name="ID">Initial value of ID.</param>
+<param name="isEstimate">Initial value of IsEstimate.</param>
+<param name="c_Date">Initial value of c_Date.</param>
+<param name="lot">Initial value of Lot.</param>
+<param name="periodTotal">Initial value of PeriodTotal.</param>
+<param name="periodAverage">Initial value of PeriodAverage.</param>
+<param name="dayTotal">Initial value of DayTotal.</param>
+<param name="dayAverage">Initial value of DayAverage.</param>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.ID">
+<summary>
+There are no comments for Property ID in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.WBStream">
+<summary>
+There are no comments for Property WBStream in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.MAStream">
+<summary>
+There are no comments for Property MAStream in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.Direction">
+<summary>
+There are no comments for Property Direction in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.SourcePlant">
+<summary>
+There are no comments for Property SourcePlant in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.Description">
+<summary>
+There are no comments for Property Description in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.PlantStreams">
+<summary>
+There are no comments for Property PlantStreams in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.DestPlant">
+<summary>
+There are no comments for Property DestPlant in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.Material">
+<summary>
+There are no comments for Property Material in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.MatCategory">
+<summary>
+There are no comments for Property MatCategory in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.IsEstimate">
+<summary>
+There are no comments for Property IsEstimate in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.c_Date">
+<summary>
+There are no comments for Property c_Date in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.Lot">
+<summary>
+There are no comments for Property Lot in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.UOM">
+<summary>
+There are no comments for Property UOM in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.Assay">
+<summary>
+There are no comments for Property Assay in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.PeriodTotal">
+<summary>
+There are no comments for Property PeriodTotal in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.PeriodAverage">
+<summary>
+There are no comments for Property PeriodAverage in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.DayTotal">
+<summary>
+There are no comments for Property DayTotal in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.TransactionSummary.DayAverage">
+<summary>
+There are no comments for Property DayAverage in the schema.
+</summary>
+</member>
+<member name="T:StreamMapperTotals.StreamDataDomainServiceData.StreamTotal">
+<summary>
+There are no comments for LightSwitchApplication.StreamTotal in the schema.
+</summary>
+<KeyProperties>
+ID
+</KeyProperties>
+</member>
+<member name="M:StreamMapperTotals.StreamDataDomainServiceData.StreamTotal.CreateStreamTotal(System.Int32,System.DateTime,System.Double)">
+<summary>
+Create a new StreamTotal object.
+</summary>
+<param name="ID">Initial value of ID.</param>
+<param name="day">Initial value of Day.</param>
+<param name="result">Initial value of Result.</param>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamTotal.ID">
+<summary>
+There are no comments for Property ID in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamTotal.Plant">
+<summary>
+There are no comments for Property Plant in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamTotal.StreamTotalName">
+<summary>
+There are no comments for Property StreamTotalName in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamTotal.Day">
+<summary>
+There are no comments for Property Day in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamTotal.Result">
+<summary>
+There are no comments for Property Result in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamTotal.UOM">
+<summary>
+There are no comments for Property UOM in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamTotal.PITag">
+<summary>
+There are no comments for Property PITag in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamTotal.ItemToCalc">
+<summary>
+There are no comments for Property ItemToCalc in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamTotal.CalcType">
+<summary>
+There are no comments for Property CalcType in the schema.
+</summary>
+</member>
+<member name="P:StreamMapperTotals.StreamDataDomainServiceData.StreamTotal.Message">
+<summary>
+There are no comments for Property Message in the schema.
+</summary>
+</member>
+</members>
+</doc>

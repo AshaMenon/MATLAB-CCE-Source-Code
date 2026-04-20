@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1b9493e9-4850-4e07-bf94-5f229da23480" xmlns="urn:schemas-microsoft-com:xml-dataservicemap">
+  <MetadataSources>
+    <MetadataSource Address="http://aiswsmlwww01.angloiit.net/StreamMapper/StreamDataDomainServiceData.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.edmx" MetadataType="Edmx" ID="f01397f9-c233-4bb5-8b64-946a644f16a5" SourceId="1" SourceUrl="http://aiswsmlwww01.angloiit.net/StreamMapper/StreamDataDomainServiceData.svc" />
+  </Metadata>
+  <Extensions />
+  <Parameters>
+    <Parameter Name="UseDataServiceCollection" Value="false" />
+    <Parameter Name="Version" Value="1.0" />
+  </Parameters>
+</ReferenceGroup>
