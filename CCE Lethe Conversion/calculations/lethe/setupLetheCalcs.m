@@ -28,3 +28,4 @@ addpath(fullfile(convertedCalcsRootFolder, 'convertedCalculations', 'cceLethePeb
 addpath(fullfile(convertedCalcsRootFolder, 'convertedCalculations', 'cceLethePebblesAndSpillagesUG'));
 addpath(fullfile(convertedCalcsRootFolder, 'convertedCalculations', 'cceLethePeriodWeighting'));
 addpath(fullfile(convertedCalcsRootFolder, 'convertedCalculations', 'cceACExDaysTotals'));
+addpath(fullfile(convertedCalcsRootFolder, 'convertedCalculations', 'cceLetheTheoreticalRecovery'));
