@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cceLetheControlledSubstitute", "cceLetheControlledSubstitute\cceLetheControlledSubstitute.csproj", "{40363049-3B32-4971-9CCB-942DD241E009}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40363049-3B32-4971-9CCB-942DD241E009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40363049-3B32-4971-9CCB-942DD241E009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40363049-3B32-4971-9CCB-942DD241E009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40363049-3B32-4971-9CCB-942DD241E009}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0D5E36E-CE60-4463-94DF-9A96AC397C45}
+	EndGlobalSection
+EndGlobal
