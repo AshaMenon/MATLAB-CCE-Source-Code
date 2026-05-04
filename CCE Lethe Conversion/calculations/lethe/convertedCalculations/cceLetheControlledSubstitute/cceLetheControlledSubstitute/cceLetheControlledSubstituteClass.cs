@@ -183,7 +183,7 @@ namespace cceLetheControlledSubstitute
                 sOutputs.LevelUsed = levelList.ToArray();
                 sOutputs.Timestamp = dateList.ToArray();
 
-                if (sOutputs.Output.Length == 0 & sOutputs.LevelUsed.Length == 0)
+                if (sOutputs.Output.Length == 0 && sOutputs.LevelUsed.Length == 0)
                 {
                     sOutputs.Output = new double[] { double.NaN };
                     sOutputs.LevelUsed = new double[] { double.NaN };
@@ -259,9 +259,9 @@ namespace cceLetheControlledSubstitute
         {
             List<DateTime> filteredDates = new List<DateTime>();
             filteredDates.AddRange(dateArray.Where(dA => dA <= currentDate));
-            filteredDates.OrderByDescending(i => i);
+            filteredDates = filteredDates.OrderByDescending(i => i).ToList();
 
-            return filteredDates.Last();
+            return filteredDates.First();
         }
 
         private double GetLatestValue(DateTime[] dateArray, DateTime currentDate, double[] valArray)
